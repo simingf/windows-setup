@@ -1,6 +1,8 @@
 # Windows-Setup
 
-Windows Programs:
+How I setup my windows desktop.
+
+# Windows Programs:
 
 -Firefox
 
@@ -24,13 +26,13 @@ Windows Programs:
 
 -Fira Code (font)
 
-Drivers:
+# Drivers:
 
 -Nvidia Geforce Drivers
 
 -Dell Display Manager
 
-Games:
+# Games:
 
 -Battle.net & Overwatch
 
@@ -38,13 +40,13 @@ Games:
 
 -Epic Games
 
-AutoHotKey Setup:
+# AutoHotKey Setup:
 
 -press Win + R and enter 'shell:startup'
 
 -make an alias of 'hotkeys.ahk' in the folder
 
-Firefox Setup:
+# Firefox Setup:
 
 -go to 'about:config' and set 'toolkit.legacyUserProfileCustomizations.stylesheets' to 'true'
 
@@ -54,7 +56,7 @@ Firefox Setup:
 
 -or search for a new theme in firefox css reddit
 
-Git Bash Setup:
+# Git Bash Setup:
 
 -theme: dracula
 
@@ -64,7 +66,7 @@ Git Bash Setup:
 
 -make a copy of .bashrc from 'Git Bash' folder into Users/Siming
 
-VSCode Setup: (extensions)
+# VSCode Setup: (extensions)
 
 -python
 
@@ -98,7 +100,7 @@ VSCode Setup: (extensions)
 
 -typescript hero
 
-Intellij Setup: (extensions)
+# Intellij Setup: (extensions)
 
 -atom material icons
 
