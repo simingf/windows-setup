@@ -16,6 +16,8 @@ How I setup my windows desktop.
 
 -Discord
 
+-Zoom
+
 -Microsoft Todo
 
 -AutoHotKey
@@ -32,6 +34,10 @@ How I setup my windows desktop.
 
 -Dell Display Manager
 
+-Intel Driver & Support Assistant
+
+-Razer Drivers: 
+https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%9D-advanced-%282019%29-%7C-rz09-0301x-drivers-%26-downloads
 # Games:
 
 -Battle.net & Overwatch
