@@ -46,6 +46,10 @@ How I setup my windows desktop.
 
 -make an alias of 'hotkeys.ahk' in the folder
 
+# Glass2k Setup:
+
+-copy glass2k.exe into 'shell:startup' folder
+
 # Firefox Setup:
 
 -go to 'about:config' and set 'toolkit.legacyUserProfileCustomizations.stylesheets' to 'true'
