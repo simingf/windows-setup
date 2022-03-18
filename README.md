@@ -52,7 +52,7 @@ How I setup my windows desktop.
 
 -go to 'about:support' and click on 'Open Folder' in the 'Profile Folder' row
 
--copy the 'chrome' folder from 'Firefox Theme' into it.
+-copy the 'chrome' folder from the 'Firefox Theme' folder into the opened directory
 
 -or search for a new theme in firefox css reddit
 
@@ -64,7 +64,7 @@ How I setup my windows desktop.
 
 -columns: 66 rows: 30
 
--make a copy of .bashrc from 'Git Bash' folder into Users/Siming
+-copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
 
 # VSCode Setup: (extensions)
 
