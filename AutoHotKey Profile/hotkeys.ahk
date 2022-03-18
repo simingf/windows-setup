@@ -21,12 +21,16 @@ Send !{F4}
 }
 Return
 
+#Enter::
+Run, C:\Program Files\Git\git-bash.exe
+return
+
 #f::
 Run, firefox
 return
 
-#Enter::
-Run, C:\Program Files\Git\git-bash.exe
+#w::
+Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 return
 
 #n::
