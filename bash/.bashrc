@@ -6,6 +6,7 @@ PS1="\[\e[34m\]\W/\[\e[35m\]\$(parse_git_branch)\[\e[34m\]> "
 
 cd "C:\Users\Simin\Documents"
 
+alias e='exit'
 alias c='clear'
 alias sl='ls' #typo safe
 alias mkdir='mkdir -pv' #makes parent folders and notifies all folders made
@@ -40,5 +41,5 @@ alias music='start firefox https://music.apple.com/library/recently-added && exi
 alias youtube='start firefox https://www.youtube.com/ && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit'
 
-alias ubrc='home && cp .bashrc ~/Documents/Windows-Setup/bash/' #update bashrc to windows-setup folder
+alias cpbash='home && cp .bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
 alias restart='home && source .bashrc'
