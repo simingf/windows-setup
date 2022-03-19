@@ -40,5 +40,5 @@ alias music='start firefox https://music.apple.com/library/recently-added && exi
 alias youtube='start firefox https://www.youtube.com/ && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit'
 
-alias ubrc='home && cp .bashrc ~/Documents/Windows-Setup/bash/'
+alias ubrc='home && cp .bashrc ~/Documents/Windows-Setup/bash/' #update bashrc to windows-setup folder
 alias restart='home && source .bashrc'
