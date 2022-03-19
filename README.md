@@ -56,6 +56,20 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 
 -copy glass2k.exe into 'shell:startup' folder
 
+# PowerToys Setup:
+
+-space around zones: 10
+
+-highlight distance: 10
+
+-layout 1: 700x1390 && 1830x1390
+
+-layout 2: 1265x1390 && 1265x1390
+
+-layout 3: 1830x1390 && 700x1390
+
+-layout 4: 2540x1390
+
 # Firefox Setup:
 
 -go to 'about:config' and set 'toolkit.legacyUserProfileCustomizations.stylesheets' to 'true'
