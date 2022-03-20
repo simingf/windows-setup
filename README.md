@@ -26,6 +26,8 @@ How I setup my windows desktop.
 
 -Glass2k
 
+-Groupy (Steam)
+
 -Fira Code (font)
 
 # Drivers:
