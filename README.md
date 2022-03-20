@@ -44,6 +44,8 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 
 -Battle.net & Overwatch
 
+-Valorant
+
 -Steam
 
 -Epic Games
