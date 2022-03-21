@@ -4,8 +4,6 @@ parse_git_branch() {
 
 PS1="\[\e[34m\]\W \[\e[35m\]\$(parse_git_branch)\[\e[34m\]> "
 
-cd "C:\Users\Simin\Documents"
-
 #general aliases
 alias e='exit'
 alias c='clear'
