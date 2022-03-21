@@ -51,5 +51,6 @@ alias reddit='start firefox https://www.reddit.com/ && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
 
 #misc. aliases
-alias cpbash='home && cp .bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
+alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
+alias cphotkey='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/autohotkey/' #copy hotkeys to windows-setup folder
 alias restart='home && source .bashrc'
