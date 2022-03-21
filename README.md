@@ -40,6 +40,7 @@ How I setup my windows desktop.
 
 -Razer Drivers: 
 https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%9D-advanced-%282019%29-%7C-rz09-0301x-drivers-%26-downloads
+
 # Games:
 
 -Battle.net & Overwatch
@@ -49,6 +50,18 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 -Steam
 
 -Epic Games
+
+# Coding:
+
+-Java
+
+-Maven
+
+-NodeJS
+
+-Typescript
+
+-React
 
 # AutoHotKey Setup:
 
