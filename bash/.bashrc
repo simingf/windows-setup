@@ -41,9 +41,11 @@ alias win='cd ~/Documents/Windows-Setup/'
 alias brown='cd ~/OneDrive/Brown/'
 alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
 alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'
-alias calchw='calc && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20Textbook.pdf && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20HW.pdf && exit'
+alias calctxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20Textbook.pdf'
+alias calchw='calctxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20HW.pdf && exit'
 alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
-alias alghw='alg && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
+alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf'
+alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
 
 #msedge school aliases
 alias edge='start msedge && exit'
