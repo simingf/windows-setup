@@ -25,14 +25,18 @@ Return
 Run, C:\Program Files\Git\git-bash.exe
 return
 
+#e::
+Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+return
+
+#f::
+Run, explorer
+return
+
 #w::
 Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 return
 
 #n::
 Run, notepad
-return
-
-#e::
-Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 return
