@@ -47,7 +47,7 @@ alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
 alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf'
 alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
 
-#msedge school aliases
+#school aliases
 alias edge='start msedge && exit'
 alias mail='start msedge https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start msedge https://canvas.brown.edu/ && exit'
@@ -56,12 +56,12 @@ alias github='start msedge https://github.com/ && exit'
 alias notion='start msedge https://www.notion.so/ && exit'
 alias slack='start msedge https://fullstackatbrown.slack.com/ && exit'
 
-#msedge chill aliases
+#chill aliases
 alias music='start msedge https://music.apple.com/library/recently-added && exit'
 alias youtube='start msedge https://www.youtube.com/ && exit'
 alias lofi='start msedge https://www.youtube.com/watch?v=5qap5aO4i9A && exit'
-alias netflix='start msedge https://www.netflix.com/browse && exit'
-alias disney='start msedge https://www.disneyplus.com/home && exit'
+alias netflix='start firefox https://www.netflix.com/browse && exit' #streaming doesn't work well on edge
+alias disney='start firefox https://www.disneyplus.com/home && exit' #streaming doesn't work well on edge
 alias reddit='start msedge https://www.reddit.com/ && exit'
 alias monkey='start msedge https://monkeytype.com/ && exit'
 
