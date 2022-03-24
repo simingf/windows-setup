@@ -65,9 +65,15 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 
 # AutoHotKey Setup:
 
+-copy 'hotkeys.ahk' into Documents
+
 -press Win + R and enter 'shell:startup'
 
--make an alias of 'hotkeys.ahk' in the folder
+-make an alias of 'hotkeys.ahk' in the startup folder
+
+-the directory that 'hotkeys.ahk' is in affects the default starting location of git bash
+
+-use cphotkeys in bash to update the hotkeys file in win-setup with the hotkeys file in Documents
 
 # Glass2k Setup:
 
@@ -106,6 +112,8 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 -columns: 66 rows: 30
 
 -copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
+
+-use cpbash to update the bashrc file in win-setup with the bashrc file in Home
 
 # VSCode Setup: (extensions)
 
