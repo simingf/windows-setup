@@ -1,8 +1,5 @@
 #SingleInstance Force
 
-; Enable hot reloading of changes to this file
-Run, komorebic.exe watch-configuration enable, , Hide
-
 ; Enable focus follows mouse
 Run, komorebic.exe focus-follows-mouse enable, , Hide
 
@@ -18,18 +15,17 @@ Run, komorebic.exe workspace-name 0 4 five, , Hide
 
 ; Set the padding of the different workspaces
 Run, komorebic.exe workspace-padding 0 0 5, , Hide
-Run, komorebic.exe container-padding 0 0 10, , Hide
+Run, komorebic.exe container-padding 0 0 5, , Hide
 Run, komorebic.exe workspace-padding 0 1 5, , Hide
-Run, komorebic.exe container-padding 0 1 10, , Hide
+Run, komorebic.exe container-padding 0 1 5, , Hide
 Run, komorebic.exe workspace-padding 0 2 5, , Hide
-Run, komorebic.exe container-padding 0 2 10, , Hide
+Run, komorebic.exe container-padding 0 2 5, , Hide
 Run, komorebic.exe workspace-padding 0 3 5, , Hide
-Run, komorebic.exe container-padding 0 3 10, , Hide
+Run, komorebic.exe container-padding 0 3 5, , Hide
 Run, komorebic.exe workspace-padding 0 4 5, , Hide
-Run, komorebic.exe container-padding 0 4 10, , Hide
+Run, komorebic.exe container-padding 0 4 5, , Hide
 
 ; Always show chat apps on the second workspace
-Run, komorebic.exe workspace-rule exe slack.exe 0 1, , Hide
 Run, komorebic.exe workspace-rule exe Discord.exe 0 1, , Hide
 
 ; Always float IntelliJ popups, matching on class
@@ -39,14 +35,9 @@ Run, komorebic.exe float-rule title "Control Panel", , Hide
 ; Always float Task Manager, matching on class
 Run, komorebic.exe float-rule class TaskManagerWindow, , Hide
 ; Always float Wally, matching on executable name
-Run, komorebic.exe float-rule exe Wally.exe, , Hide
-Run, komorebic.exe float-rule exe wincompose.exe, , Hide
-; Always float Calculator app, matching on window title
-Run, komorebic.exe float-rule title Calculator, , Hide
-Run, komorebic.exe float-rule exe 1Password.exe, , Hide
 
 ; Always manage forcibly these applications that don't automatically get picked up by komorebi
-Run, komorebic.exe manage-rule exe TIM.exe, , Hide
+Run, komorebic.exe manage-rule exe git-bash.exe, , Hide
 
 ; Identify applications that close to the tray
 Run, komorebic.exe identify-tray-application exe Discord.exe, , Hide
@@ -121,11 +112,6 @@ return
 ; Float the focused window, Alt + T
 !t::
 Run, komorebic.exe toggle-float, , Hide
-return
-
-; Reload ~/komorebi.ahk, Alt + O
-!o::
-Run, komorebic.exe reload-configuration, , Hide
 return
 
 ; Switch to workspace
