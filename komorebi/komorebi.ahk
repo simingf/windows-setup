@@ -79,6 +79,36 @@ return
 Run, komorebic.exe move right, , Hide
 return
 
+; Increase Width Left
+!h::
+Run, komorebic.exe resize-edge left increase, , Hide
+return
+
+; Increase Height Down
+!j::
+Run, komorebic.exe resize-edge down increase, , Hide
+return
+
+; Increase Height Up
+!k::
+Run, komorebic.exe resize-edge up increase, , Hide
+return
+
+; Increase Width Right
+!l::
+Run, komorebic.exe resize-edge right increase, , Hide
+return
+
+; Flip horizontally, Alt + Z
+!z::
+Run, komorebic.exe flip-layout horizontal, , Hide
+return
+
+; Flip vertically, Alt + X
+!x::
+Run, komorebic.exe flip-layout vertical, , Hide
+return
+
 ; Promote the focused window to the top of the tree, Alt + Shift + Enter
 !+Enter::
 Run, komorebic.exe promote, , Hide
@@ -94,24 +124,14 @@ return
 Run, komorebic.exe toggle-maximize, , Hide
 return
 
-; Flip horizontally, Alt + Z
-!z::
-Run, komorebic.exe flip-layout horizontal, , Hide
-return
-
-; Flip vertically, Alt + X
-!x::
-Run, komorebic.exe flip-layout vertical, , Hide
+; Float the focused window, Alt + T
+!t::
+Run, komorebic.exe toggle-float, , Hide
 return
 
 ; Force a retile if things get janky, Alt + Shift + R
 !+r::
 Run, komorebic.exe retile, , Hide
-return
-
-; Float the focused window, Alt + T
-!t::
-Run, komorebic.exe toggle-float, , Hide
 return
 
 ; Switch to workspace
