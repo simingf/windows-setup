@@ -4,6 +4,8 @@ parse_git_branch() {
 
 PS1="\[\e[35m\]|\[\e[34m\]\W\[\e[35m\]|\[\e[34m\]\$(parse_git_branch)\[\e[35m\]|> \[\e[00m\]"
 
+cat ~/Documents/Windows-Setup/bash_start.txt
+
 #general aliases
 alias e='exit'
 alias c='clear'
@@ -22,6 +24,10 @@ alias gs='git switch'
 alias vscode='code && exit'
 alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
 alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
+
+#komorebi aliases (TWM)
+alias kstart='komorebic start'
+alias kstop='komorebic stop'
 
 #mvn aliases
 alias mvnp='mvn package'

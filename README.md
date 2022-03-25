@@ -1,6 +1,6 @@
 # Windows-Setup
 
-How I setup my windows desktop.
+Instructions for setting up Windows desktop. Clone this repository into Documents.
 
 # Windows Programs:
 
@@ -20,13 +20,15 @@ How I setup my windows desktop.
 
 -Microsoft Todo
 
+# Utilites:
+
 -AutoHotKey
 
--PowerToys
+-Komorebi (TWM)
 
--Glass2k
+-PowerToys Run (spotlight clone)
 
--Groupy (Steam)
+-Glass2k (transparent windows)
 
 -Fira Code (font)
 
@@ -37,9 +39,6 @@ How I setup my windows desktop.
 -Dell Display Manager
 
 -Intel Driver & Support Assistant
-
--Razer Drivers: 
-https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%9D-advanced-%282019%29-%7C-rz09-0301x-drivers-%26-downloads
 
 # Games:
 
@@ -63,35 +62,45 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 
 -React
 
-# AutoHotKey Setup:
+# Git Bash Setup:
 
--copy 'hotkeys.ahk' into Documents
+-theme: dracula
+
+-transparency: medium
+
+-columns: 60 rows: 37
+
+-copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
+
+-use cpbash to update the bashrc file in win-setup with the bashrc file in Home
+
+# Komorebi Setup: (files in startup effect git bash default dir)
+
+-install latest version from github
+
+-make a folder called komorebi in Documents, add the folder to PATH, and put komorebi.exe and komorebic.exe in the folder
+
+-copy 'komorebi.ahk' from Win-Setup into Documents
 
 -press Win + R and enter 'shell:startup'
 
 -make an alias of 'hotkeys.ahk' in the startup folder
 
--the directory that 'hotkeys.ahk' is in affects the default starting location of git bash
+-use cpkomorebi in bash to update the komorebi file in win-setup with the komorebi file in Documents
+
+# HotKeys Setup: (files in startup effect git bash default dir)
+
+-copy 'hotkeys.ahk' from Win-Setup into Documents
+
+-press Win + R and enter 'shell:startup'
+
+-make an alias of 'hotkeys.ahk' in the startup folder
 
 -use cphotkeys in bash to update the hotkeys file in win-setup with the hotkeys file in Documents
 
-# Glass2k Setup:
+# Glass2k Setup: (transparent windows)
 
 -copy glass2k.exe into 'shell:startup' folder
-
-# PowerToys Setup:
-
--space around zones: 10
-
--highlight distance: 10
-
--layout 1: 700x1390 && 1830x1390
-
--layout 2: 1265x1390 && 1265x1390
-
--layout 3: 1830x1390 && 700x1390
-
--layout 4: 2540x1390
 
 # Firefox Setup:
 
@@ -102,18 +111,6 @@ https://mysupport.razer.com/app/answers/detail/a_id/5503/~/razer-blade-15%E2%80%
 -copy the 'chrome' folder from the 'Firefox Theme' folder into the opened directory
 
 -or search for a new theme in firefox css reddit
-
-# Git Bash Setup:
-
--theme: dracula
-
--transparency: medium
-
--columns: 66 rows: 30
-
--copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
-
--use cpbash to update the bashrc file in win-setup with the bashrc file in Home
 
 # VSCode Setup: (extensions)
 
