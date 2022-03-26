@@ -18,13 +18,17 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Zoom
 
--Microsoft Todo
+-Microsoft Todo (MS Store)
+
+-Microsoft Office (Brown)
 
 # Utilites:
 
 -AutoHotKey
 
--FancyWM (Tiling Window Manager)
+-FancyWM (TWM) (MS Store)
+
+-Caffeine
 
 -Glass2k (transparent windows)
 
@@ -50,7 +54,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Coding:
 
--Java
+-Java Development Kit
 
 -Maven
 
