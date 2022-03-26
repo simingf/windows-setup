@@ -4,7 +4,7 @@ parse_git_branch() {
 
 PS1="\[\e[35m\]|\[\e[34m\]\W\[\e[35m\]|\[\e[34m\]\$(parse_git_branch)\[\e[35m\]|> \[\e[00m\]"
 
-cat ~/Documents/Windows-Setup/bash_start.txt
+cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
 #general aliases
 alias e='exit'
@@ -24,10 +24,6 @@ alias gs='git switch'
 alias vscode='code && exit'
 alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
 alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
-
-#komorebi aliases (TWM)
-alias kstart='komorebic start'
-alias kstop='komorebic stop'
 
 #mvn aliases
 alias mvnp='mvn package'
@@ -52,6 +48,7 @@ alias calchw='calctxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Seme
 alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
 alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf'
 alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
+alias phil='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Papers/'
 
 #school aliases
 alias edge='start msedge && exit'
@@ -74,5 +71,5 @@ alias monkey='start msedge https://monkeytype.com/ && exit'
 #misc. aliases
 alias editrc='code ~/.bashrc'
 alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
-alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/autohotkey/' #copy hotkeys to windows-setup folder
+alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/' #copy hotkeys to windows-setup folder
 alias restart='home && source .bashrc && doc'

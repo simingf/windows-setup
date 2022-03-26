@@ -24,7 +24,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -AutoHotKey
 
--Komorebi (TWM)
+-FancyWM (TWM)
 
 -PowerToys Run (spotlight clone)
 
@@ -73,20 +73,6 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
 
 -use cpbash to update the bashrc file in win-setup with the bashrc file in Home
-
-# Komorebi Setup: (files in startup effect git bash default dir)
-
--install latest version from github
-
--make a folder called komorebi in Documents, add the folder to PATH, and put komorebi.exe and komorebic.exe in the folder
-
--copy 'komorebi.ahk' from Win-Setup into Documents
-
--press Win + R and enter 'shell:startup'
-
--make an alias of 'hotkeys.ahk' in the startup folder
-
--use cpkomorebi in bash to update the komorebi file in win-setup with the komorebi file in Documents
 
 # HotKeys Setup: (files in startup effect git bash default dir)
 
