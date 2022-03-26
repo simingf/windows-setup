@@ -2,7 +2,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="\[\e[35m\]|\[\e[34m\]\W\[\e[35m\]|\[\e[34m\]\$(parse_git_branch)\[\e[35m\]|> \[\e[00m\]"
+PS1="\[\e[35m\]|\[\e[34m\]\W\[\e[35m\]|\$(parse_git_branch)|> \[\e[00m\]"
 
 cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
@@ -24,6 +24,7 @@ alias gs='git switch'
 alias vscode='code && exit'
 alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
 alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
+alias wechat='cd /c/Program\ Files\ \(x86\)/Tencent/WeChat/ && start WeChat.exe && exit'
 
 #mvn aliases
 alias mvnp='mvn package'
@@ -37,9 +38,9 @@ alias home='cd ~'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
+alias win='cd ~/Documents/Windows-Setup/'
 alias cs32='cd ~/Documents/cs32/'
 alias proj2='cs32 && cd project-2-janagony-kkang11-sfeng22/backend/'
-alias win='cd ~/Documents/Windows-Setup/'
 alias brown='cd ~/OneDrive/Brown/'
 alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
 alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'
@@ -50,8 +51,17 @@ alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MA
 alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
 alias phil='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Papers/'
 
+#search functions
+duck() { 
+  sq=$(sed 's/ /+/g' <<< "$*")
+  start msedge https://duckduckgo.com/?q=$sq && exit; 
+  }
+you() { 
+  sq=$(sed 's/ /+/g' <<< "$*")
+  start msedge https://www.youtube.com/results?search_query=$sq && exit; 
+  }
+
 #school aliases
-alias edge='start msedge && exit'
 alias gmail='start msedge https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start msedge https://canvas.brown.edu/ && exit'
 alias edstem='start msedge https://edstem.org/us/dashboard && exit'
@@ -62,7 +72,6 @@ alias slack='start msedge https://fullstackatbrown.slack.com/ && exit'
 
 #chill aliases
 alias music='start msedge https://music.apple.com/library/recently-added && exit'
-alias youtube='start msedge https://www.youtube.com/ && exit'
 alias lofi='start msedge https://www.youtube.com/watch?v=5qap5aO4i9A && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit' #streaming doesn't work well on edge
 alias disney='start firefox https://www.disneyplus.com/home && exit' #streaming doesn't work well on edge
