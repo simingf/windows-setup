@@ -25,12 +25,8 @@ Return
 Run, C:\Program Files\Git\git-bash.exe
 return
 
-#e::
+#+Enter::
 Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-return
-
-#f::
-Run, explorer
 return
 
 #w::
