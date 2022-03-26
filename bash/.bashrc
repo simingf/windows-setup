@@ -52,9 +52,10 @@ alias phil='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/
 
 #school aliases
 alias edge='start msedge && exit'
-alias mail='start msedge https://mail.google.com/mail/u/0/#inbox && exit'
+alias gmail='start msedge https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start msedge https://canvas.brown.edu/ && exit'
 alias edstem='start msedge https://edstem.org/us/dashboard && exit'
+alias gradescope='start msedge https://www.gradescope.com/ && exit'
 alias github='start msedge https://github.com/ && exit'
 alias notion='start msedge https://www.notion.so/ && exit'
 alias slack='start msedge https://fullstackatbrown.slack.com/ && exit'
