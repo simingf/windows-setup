@@ -24,9 +24,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -AutoHotKey
 
--FancyWM (TWM)
-
--PowerToys Run (spotlight clone)
+-FancyWM (Tiling Window Manager)
 
 -Glass2k (transparent windows)
 
