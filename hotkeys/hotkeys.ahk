@@ -8,7 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Send %Title%
 ;Return
 
-#Esc::
+!Esc::
 WinGetActiveTitle, Title
 IfInString, Title, /usr/bin/bash
 {
@@ -21,18 +21,18 @@ Send !{F4}
 }
 Return
 
-#Enter::
+!Enter::
 Run, C:\Program Files\Git\git-bash.exe
 return
 
-#+Enter::
+!+Enter::
 Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 return
 
-#w::
+!w::
 Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 return
 
-#n::
+!n::
 Run, notepad
 return
