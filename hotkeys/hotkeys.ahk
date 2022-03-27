@@ -29,6 +29,10 @@ return
 Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 return
 
+!e::
+Run, explorer
+return
+
 !w::
 Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 return
