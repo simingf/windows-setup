@@ -49,7 +49,8 @@ alias calchw='calctxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Seme
 alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
 alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf'
 alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
-alias phil='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Papers/'
+alias phil0210='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/'
+phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/ && start 0210-2022-LEC$1.pdf && exit; }
 
 #search functions
 duck() { 
