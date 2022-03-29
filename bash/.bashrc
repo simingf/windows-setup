@@ -45,10 +45,12 @@ alias brown='cd ~/OneDrive/Brown/'
 alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
 alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'
 alias calctxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20Textbook.pdf'
-alias calchw='calctxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20HW.pdf && exit'
+alias calchw='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH0180%20Multivariable%20Calculus/MATH0180%20HW.pdf'
+alias calcstart='calctxt && calchw && exit'
 alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
 alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20Textbook.pdf'
-alias alghw='algtxt && algtxt && start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf && exit'
+alias alghw='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf'
+alias algstart='algtxt && algtxt && alghw && exit'
 alias phil0210='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/'
 phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/ && start 0210-2022-LEC$1.pdf && exit; }
 
@@ -82,6 +84,7 @@ alias monkey='start msedge https://monkeytype.com/ && exit'
 #misc. aliases
 alias editrc='code ~/.bashrc'
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
-alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
-alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/' #copy hotkeys to windows-setup folder
+alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo "bash updated"' #copy bashrc to windows-setup folder
+alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
+alias winupdate='cpbash && cphotkeys && win && gac'
 alias restart='home && source .bashrc && doc'
