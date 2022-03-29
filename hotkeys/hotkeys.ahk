@@ -12,9 +12,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinGetActiveTitle, Title
 IfInString, Title, /usr/bin/bash
 {
-SendInput !{Backspace}
+Send !{Backspace}
 Send exit
-SendInput {Enter}
+Send {Enter}
 }
 Else
 {
@@ -24,20 +24,28 @@ Return
 
 !Enter::
 Run, C:\Program Files\Git\git-bash.exe
-return
+Return
 
 !+Enter::
 Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-return
+Return
 
 !e::
 Run, explorer
-return
+Return
 
 !w::
 Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
-return
+Return
 
 !n::
 Run, notepad
-return
+Return
+
+!t::
+Send !{Space}
+Sleep 100
+Send todo
+Sleep 100
+Send {Enter}
+Return
