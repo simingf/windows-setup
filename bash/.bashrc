@@ -16,8 +16,12 @@ alias open='start . && exit' #open folder in file explorer
 alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
-alias gac='git add -A && git commit -a -m' #git add commit
-alias gp='git push'
+gup() { #git update (add commit push)
+  git add -A
+  git commit -a -m $1
+  git push
+}
+alias gp='git pull'
 alias gs='git switch'
 
 #software aliases
@@ -57,11 +61,14 @@ phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lec
 #search functions
 duck() { 
   sq=$(sed 's/ /+/g' <<< "$*")
-  start msedge https://duckduckgo.com/?q=$sq && exit; 
+  start msedge https://duckduckgo.com/?q=$sq
+  exit
   }
+
 you() { 
   sq=$(sed 's/ /+/g' <<< "$*")
-  start msedge https://www.youtube.com/results?search_query=$sq && exit; 
+  start msedge https://www.youtube.com/results?search_query=$sq
+  exit
   }
 
 #school aliases
@@ -86,5 +93,5 @@ alias editrc='code ~/.bashrc'
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo "bash updated"' #copy bashrc to windows-setup folder
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
-alias winupdate='cpbash && cphotkeys && win && gac'
+alias winupdate='cpbash && cphotkeys && win && gup'
 alias restart='home && source .bashrc && doc'
