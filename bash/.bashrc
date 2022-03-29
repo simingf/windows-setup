@@ -16,6 +16,14 @@ alias open='start . && exit' #open folder in file explorer
 alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
+
+#software aliases
+alias vscode='code && exit'
+alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
+alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
+alias wechat='cd /c/Program\ Files\ \(x86\)/Tencent/WeChat/ && start WeChat.exe && exit'
+
+#git aliases
 gup() { #git update (add commit push)
   git add -A
   git commit -q -a -m "$*"
@@ -23,12 +31,6 @@ gup() { #git update (add commit push)
 }
 alias gp='git pull'
 alias gs='git switch'
-
-#software aliases
-alias vscode='code && exit'
-alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
-alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
-alias wechat='cd /c/Program\ Files\ \(x86\)/Tencent/WeChat/ && start WeChat.exe && exit'
 
 #mvn aliases
 alias mvnp='mvn package'
@@ -60,18 +62,18 @@ phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lec
 
 #search functions
 duck() { 
-  sq=$(sed 's/ /+/g' <<< "$*")
+  sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start msedge https://duckduckgo.com/?q=$sq
   exit
   }
 
 you() { 
-  sq=$(sed 's/ /+/g' <<< "$*")
+  sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start msedge https://www.youtube.com/results?search_query=$sq
   exit
   }
 
-#school aliases
+#school browser aliases
 alias gmail='start msedge https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start msedge https://canvas.brown.edu/ && exit'
 alias edstem='start msedge https://edstem.org/us/dashboard && exit'
@@ -80,7 +82,7 @@ alias github='start msedge https://github.com/ && exit'
 alias notion='start msedge https://www.notion.so/ && exit'
 alias slack='start msedge https://fullstackatbrown.slack.com/ && exit'
 
-#chill aliases
+#chill browser aliases
 alias music='start msedge https://music.apple.com/library/recently-added && exit'
 alias lofi='start msedge https://www.youtube.com/watch?v=5qap5aO4i9A && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit' #streaming doesn't work well on edge
