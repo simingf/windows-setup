@@ -12,6 +12,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinGetActiveTitle, Title
 IfInString, Title, /usr/bin/bash
 {
+SendInput !{Backspace}
 Send exit
 SendInput {Enter}
 }
