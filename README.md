@@ -34,6 +34,8 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Fira Code (font)
 
+-Surfshark VPN
+
 # Drivers:
 
 -Nvidia Geforce Drivers

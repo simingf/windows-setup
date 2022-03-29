@@ -81,6 +81,7 @@ alias monkey='start msedge https://monkeytype.com/ && exit'
 
 #misc. aliases
 alias editrc='code ~/.bashrc'
+alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/' #copy bashrc to windows-setup folder
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/' #copy hotkeys to windows-setup folder
 alias restart='home && source .bashrc && doc'
