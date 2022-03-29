@@ -26,8 +26,8 @@ alias wechat='cd /c/Program\ Files\ \(x86\)/Tencent/WeChat/ && start WeChat.exe 
 #git aliases
 gup() { #git update (add commit push)
   git add -A
-  git commit -q -a -m "$*"
-  git push -q
+  git commit -a -m "$*"
+  git push
 }
 alias gp='git pull'
 alias gs='git switch'
