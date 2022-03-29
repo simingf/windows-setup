@@ -18,7 +18,7 @@ alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 gup() { #git update (add commit push)
   git add -A
-  git commit -a -m $1
+  git commit -a -m "$*"
   git push
 }
 alias gp='git pull'
