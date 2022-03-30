@@ -61,9 +61,15 @@ alias phil0210='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philoso
 phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/ && start 0210-2022-LEC$1.pdf && exit; }
 
 #search functions
-duck() { 
+edge() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start msedge https://duckduckgo.com/?q=$sq
+  exit
+  }
+
+fox() { 
+  sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
+  start firefox https://duckduckgo.com/?q=$sq
   exit
   }
 
