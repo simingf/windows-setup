@@ -28,7 +28,7 @@ gup() { #git update (add commit push)
   git add -A
   git commit -a -m "$*"
   git push
-}
+  }
 alias gp='git pull'
 alias gs='git switch'
 
@@ -39,7 +39,7 @@ alias run='./run --gui'
 
 #directory aliases
 alias cd..='cd ..'
-alias ..="cd .."
+alias ..='cd ..'
 alias home='cd ~'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
@@ -58,7 +58,11 @@ alias algtxt='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MA
 alias alghw='start msedge file:///C:/Users/Simin/OneDrive/Brown/Semester%202/MATH1530%20Abstract%20Algebra/MATH1530%20HW.pdf'
 alias algstart='algtxt && algtxt && alghw && exit'
 alias phil0210='cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/'
-phil() { cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/ && start 0210-2022-LEC$1.pdf && exit; }
+phil() { 
+  cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/
+  start 0210-2022-LEC$1.pdf
+  exit
+  }
 
 #search functions
 edge() { 
