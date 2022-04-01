@@ -17,12 +17,6 @@ alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 
-#software aliases
-alias vscode='code && exit'
-alias idea='cd /c/Program\ Files/JetBrains/IntelliJ\ IDEA\ 2021.3.2/bin/ && start idea64.exe && exit'
-alias word='cd /c/Program\ Files/Microsoft\ Office/root/Office16/ && start WINWORD.exe && exit'
-alias wechat='cd /c/Program\ Files\ \(x86\)/Tencent/WeChat/ && start WeChat.exe && exit'
-
 #git aliases
 gup() { #git update (add commit push)
   git add -A

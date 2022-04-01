@@ -34,6 +34,10 @@ Return
 Run, firefox
 return
 
+!t::
+Run, todo
+Return
+
 !e::
 Run, explorer
 Return
@@ -44,12 +48,4 @@ Return
 
 !n::
 Run, notepad
-Return
-
-!t::
-Send !{Space}
-Sleep 100
-Send todo
-Sleep 100
-Send {Enter}
 Return
