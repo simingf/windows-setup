@@ -27,7 +27,7 @@ Run, C:\Program Files\Git\git-bash.exe
 Return
 
 !+Enter::
-Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+Run, msedge
 Return
 
 !^Enter::
