@@ -92,7 +92,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -use cpbash to update the bashrc file in win-setup with the bashrc file in Home
 
-# HotKeys Setup: (files in startup effect git bash default dir)
+# HotKeys Setup:
 
 -copy 'hotkeys.ahk' from Win-Setup into Documents
 
