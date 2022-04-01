@@ -30,6 +30,10 @@ Return
 Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 Return
 
+!^Enter::
+Run, firefox
+return
+
 !e::
 Run, explorer
 Return
