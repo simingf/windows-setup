@@ -27,10 +27,6 @@ Run, C:\Program Files\Git\git-bash.exe
 Return
 
 !+Enter::
-Run, msedge
-Return
-
-!^Enter::
 Run, firefox
 return
 

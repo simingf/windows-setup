@@ -26,11 +26,11 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -AutoHotKey
 
--FancyWM (TWM) (MS Store)
+-PowerToys
+
+-FancyWM (MS Store)
 
 -Rainmeter (Ultra Calendar)
-
--Caffeine
 
 -Glass2k (transparent windows)
 
@@ -67,6 +67,18 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Typescript
 
 -React
+
+# Creating Application Shortcuts:
+
+-press win + r, and type shell:appsfolder
+
+-find the app you want to make shortcut for, and make an alias for it in desktop
+
+-move the app from desktop to documents and rename it to something simple
+
+-git bash: alias app='doc && start app && exit'
+
+-autohotkey: Run, app // Return
 
 # Git Bash Setup:
 
