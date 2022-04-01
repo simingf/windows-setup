@@ -60,7 +60,6 @@ fox() {
   start firefox https://duckduckgo.com/?q=$sq
   exit
   }
-
 you() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://www.youtube.com/results?search_query=$sq
@@ -80,8 +79,8 @@ alias slack='start firefox https://fullstackatbrown.slack.com/ && exit'
 #chill browser aliases
 alias music='start firefox https://music.apple.com/library/recently-added && exit'
 alias lofi='start firefox https://www.youtube.com/watch?v=5qap5aO4i9A && exit'
-alias netflix='start firefox https://www.netflix.com/browse && exit' #streaming doesn't work well on edge
-alias disney='start firefox https://www.disneyplus.com/home && exit' #streaming doesn't work well on edge
+alias netflix='start firefox https://www.netflix.com/browse && exit'
+alias disney='start firefox https://www.disneyplus.com/home && exit'
 alias reddit='start firefox https://www.reddit.com/ && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
 

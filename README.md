@@ -26,7 +26,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -AutoHotKey
 
--PowerToys
+-PowerToys (Run & Awake)
 
 -FancyWM (MS Store)
 
