@@ -106,5 +106,6 @@ alias editrc='code ~/.bashrc'
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo "bash updated"' #copy bashrc to windows-setup folder
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
-alias winupdate='cpbash && cphotkeys && win && gup'
+alias cpcalendar='cp ~/OneDrive/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
+alias winupdate='cpbash && cphotkeys && cpcalendar && win && gup'
 alias restart='home && source .bashrc && doc'

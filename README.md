@@ -28,6 +28,8 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -FancyWM (TWM) (MS Store)
 
+-Rainmeter (Ultra Calendar)
+
 -Caffeine
 
 -Glass2k (transparent windows)
