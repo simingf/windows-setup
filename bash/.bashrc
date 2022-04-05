@@ -11,7 +11,7 @@ alias e='exit'
 alias c='clear'
 alias mkdir='mkdir -pv' #makes parent folders and notifies all folders made
 alias rm='rm -rf' #rm removes folders
-alias explore='start . && exit' #open folder in file explorer
+alias open='start . && exit' #open folder in file explorer
 alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
@@ -22,7 +22,8 @@ gup() { #git update (add commit push)
   git commit -a -m "$*"
   git push
   }
-alias switch='git switch'
+alias gs='git switch'
+alias gp='git pull'
 
 #mvn aliases
 alias mvnp='mvn package'
@@ -37,7 +38,8 @@ alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias win='cd ~/Documents/Windows-Setup/'
 alias cs='cd ~/Documents/cs32/'
-alias proj2='cs32 && cd project-2-janagony-kkang11-sfeng22/backend/'
+alias 2front='cs && cd project-2-janagony-kkang11-sfeng22/frontend/table-react/table'
+alias 2back='cs && cd project-2-janagony-kkang11-sfeng22/backend/'
 alias brown='cd ~/OneDrive/Brown/'
 alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
 alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'

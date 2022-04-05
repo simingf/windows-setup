@@ -118,21 +118,25 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # VSCode Setup: (extensions)
 
--python
+-auto comment blocks
 
--java (microsoft & red hat)
+-auto import
 
--gitlens
+-auto rename tag
 
--ES7+ react
+-ESLint
 
--simple react snippets
+-GitLens
 
--html css support
+-highlight matching tag
 
--html snippets
+-HTML CSS support
+
+-HTML snippets
 
 -material icon theme
+
+-npm intellisense
 
 -open in browser
 
@@ -142,13 +146,13 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -rainbow csv
 
--sqlite
+-simple react snippets
 
--sqlite viewer
+-tabout
 
--todo highlight
+-TODO highlight
 
--typescript hero
+-visual studio intellicode
 
 # Intellij Setup: (extensions)
 
