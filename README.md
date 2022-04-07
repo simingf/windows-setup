@@ -61,7 +61,9 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -OldNewExplorer to modify explorer appearance
 -7tsp to install system icons
 -Winaero Tweaker for system tweaks
--Search for themes on Deviant Art
+-Search for themes on Deviant Art (niivu has many good themes)
+
+-current theme: Macindows (https://www.deviantart.com/niivu/art/Macindows-for-Windows-10-870073866)
 
 # Firefox Setup:
 
@@ -70,13 +72,13 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -copy the 'chrome' folder from the 'Firefox Theme' folder into the opened directory
 -or search for a new theme in firefox css reddit / other sites
 
+-current theme: GruvFox (https://github.com/FirefoxCSSThemers/GruvFox)
+
 # Git Bash Setup:
 
--theme: foreground: 0,0,0 background: 247,241,227 cursor: 129,144,132
--transparency: off
--columns: 60 rows: 37
--copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
--use cpbash to update the bashrc file in win-setup with the bashrc file in Home
+-copy the .bashrc and .minttyrc files from the 'Git Bash' folder into Home directory
+-use cpbash to update the bashrc file in 'Git Bash' with the bashrc file in Home
+-use cpmintty to update the minttyrc file in 'Git Bash' with the minttyrc file in Home
 
 # HotKeys Setup:
 
@@ -100,6 +102,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -auto rename tag
 -ESLint
 -GitLens
+-gruvbox theme
 -highlight matching tag
 -HTML CSS support
 -HTML snippets
@@ -119,6 +122,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -atom material icons
 -checkstyle
 -git tool box
+-gruvbox theme
 -javadoc
 -save actions
--visual studio code dark plus theme
+-selenium UI testing
