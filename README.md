@@ -72,7 +72,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Git Bash Setup:
 
--theme: dracula
+-theme: gruvbox
 -transparency: medium
 -columns: 60 rows: 37
 -copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
