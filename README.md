@@ -32,8 +32,6 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Rainmeter (Ultra Calendar)
 
--Glass2k (transparent windows)
-
 -Fira Code (font)
 
 -Surfshark VPN
