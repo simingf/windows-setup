@@ -89,8 +89,9 @@ alias monkey='start firefox https://monkeytype.com/ && exit'
 #misc. aliases
 alias editrc='code ~/.bashrc'
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
-alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo "bash updated"' #copy bashrc to windows-setup folder
+alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
+alias cpmintty='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
 alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
-alias winupdate='cpbash && cphotkeys && cpcalendar && win && gup'
+alias winupdate='cpbash && cpmintty && cphotkeys && cpcalendar && win && gup'
 alias restart='home && source .bashrc && doc'
