@@ -2,7 +2,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="\[\e[35m\]|\[\e[00m\]\W\[\e[35m\]|\$(parse_git_branch)|> \[\e[00m\]"
+PS1="\[\e[34m\]|\[\e[00m\]\W\[\e[34m\]|\$(parse_git_branch)|> \[\e[00m\]"
 
 cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
