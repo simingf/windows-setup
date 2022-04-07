@@ -72,8 +72,8 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Git Bash Setup:
 
--theme: foreground: 0,0,0 background: 247,241,227 cursor: 175,195,180
--transparency: low
+-theme: foreground: 0,0,0 background: 247,241,227 cursor: 129,144,132
+-transparency: off
 -columns: 60 rows: 37
 -copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
 -use cpbash to update the bashrc file in win-setup with the bashrc file in Home
