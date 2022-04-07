@@ -1,0 +1,7 @@
+To use the RemoveAddressBar.exe first remove the extension .remove
+
+The app will reside in your system tray and can be exited from there.  You'll have to close and reopen any Windows for it to take effect.
+
+This tool is optional!
+
+-niivu

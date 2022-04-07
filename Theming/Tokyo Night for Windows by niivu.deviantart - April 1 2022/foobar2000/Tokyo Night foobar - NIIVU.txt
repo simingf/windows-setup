@@ -1,0 +1,15 @@
+:: Tokyo Night foobar2000 by niivu ::
+
+Requirement:
+:: foobar2000 - http://www.foobar2000.org/download
+:: ColumnsUI - https://yuo.be/columns-ui
+
+Setup:
+:: copy contents (Skin+components folders) into your foobar2000 folder.
+:: Make sure your runnung the latest foobar2000 with ColumnsUI as interface
+:: go to preferences -> ColumnsUI -> Main -> use Import Button to import the Very Peri.fcl
+
+Best view:
+:: disable toolbars (click top left edge button) and status bar.
+
+CREDITS | MonoLite by fanco86 - https://www.deviantart.com/fanco86/art/MonoLite-122756120

@@ -1,0 +1,5 @@
+The start orbs in Windows 11 are .svg and resize automatically depending on your taskbar size and dpi settings.
+
+For Windows 10 users you can use Inkscape (free) to convert the .svg to .png according to the size required for your individual setup.  You can then use your an image editor to further customize.
+
+-niivu
