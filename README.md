@@ -26,8 +26,10 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 # Theming:
 
 -Modern Flyouts (MS Store)
+-OldNewExplorer
 -UX Theme Patcher
 -7tsp GUI
+-Winaero Tweaker
 -Fira Code (font)
 
 # Drivers:
@@ -55,8 +57,10 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 # Theme Setup:
 
 -Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586
--Use UXPatcher to force Windows to accept external themes
--Use 7tsp to install system icons
+-UXPatcher to force Windows to accept external themes
+-OldNewExplorer to modify explorer appearance
+-7tsp to install system icons
+-Winaero Tweaker for system tweaks
 -Search for themes on Deviant Art
 
 # Firefox Setup:
@@ -64,7 +68,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -go to 'about:config' and set 'toolkit.legacyUserProfileCustomizations.stylesheets' to 'true'
 -go to 'about:support' and click on 'Open Folder' in the 'Profile Folder' row
 -copy the 'chrome' folder from the 'Firefox Theme' folder into the opened directory
--or search for a new theme in firefox css reddit
+-or search for a new theme in firefox css reddit / other sites
 
 # Git Bash Setup:
 
@@ -74,20 +78,20 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -copy the .bashrc file from the 'Git Bash' folder into 'Users/Siming' directory
 -use cpbash to update the bashrc file in win-setup with the bashrc file in Home
 
-# Creating Application Shortcuts:
-
--press win + r, and type shell:appsfolder
--find the app you want to make shortcut for, and make an alias for it in desktop
--move the app from desktop to documents and rename it to something simple
--git bash: alias app='doc && start app && exit'
--autohotkey: Run, app // Return
-
 # HotKeys Setup:
 
 -copy 'hotkeys.ahk' from Win-Setup into Documents
 -press Win + R and enter 'shell:startup'
 -make an alias of 'hotkeys.ahk' in the startup folder
 -use cphotkeys in bash to update the hotkeys file in win-setup with the hotkeys file in Documents
+
+# Creating Application Shortcuts:
+
+-press win + r, and type shell:appsfolder
+-find the app you want to make shortcut for, and make an alias for it in desktop
+-move the app from desktop to documents and rename it to something simple
+-git bash: alias app='doc && start app && exit'
+-autohotkey: Run, app /newline/ Return
 
 # VSCode Setup: (extensions)
 
