@@ -19,13 +19,11 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -AutoHotKey
 -FancyWM (MS Store)
--Fluent Search
--PowerToys Awake
+-PowerToys Run
 -Rainmeter (Ultra Calendar)
 
 # Theming:
 
--Modern Flyouts (MS Store)
 -OldNewExplorer
 -UX Theme Patcher
 -7tsp GUI
