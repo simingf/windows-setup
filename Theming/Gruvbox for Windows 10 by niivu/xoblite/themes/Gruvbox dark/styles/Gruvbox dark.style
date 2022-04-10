@@ -1,0 +1,123 @@
+! ---------------------------------------------------
+! Gruvbox light by niivu
+! qwilk_AT_xoblite_DOT_net
+! http://xoblite.net/
+! March 15th, 2021
+! ---------------------------------------------------
+
+style.name:		Gruvbox light
+style.author:		niivu
+style.date:		APRIL 2021
+style.credits:		default style #1 -> xoblite bb5 RC4
+style.comments:		http://xoblite.net/
+style.wallpaper:		(see credits.txt)
+
+! --------------------------------------------------
+
+toolbar.appearance: Flat Gradient Vertical
+toolbar.color1: #3C3836
+toolbar.color2: #3C3836
+toolbar.font: Segoe UI/7/Normal
+toolbar.alignment: Center
+toolbar.textColor: #EBDBB2
+toolbar.marginWidth: 1
+toolbar.borderWidth: 0
+toolbar.borderColor: #FFFFFF
+
+toolbar.label.appearance: ParentRelative
+toolbar.label.font: Blank/1/Normal
+toolbar.label.alignment: left
+toolbar.label.textColor: #EBDBB2
+toolbar.label.marginWidth: 0
+
+toolbar.windowLabel.appearance: Flat Gradient Vertical
+toolbar.windowLabel.color1: #282828
+toolbar.windowLabel.color2: #282828
+toolbar.windowLabel.font: Segoe UI/7/Normal
+toolbar.windowLabel.alignment: Center
+toolbar.windowLabel.textColor: #EBDBB2
+toolbar.windowLabel.marginWidth: 0
+toolbar.windowLabel.borderWidth: 0
+toolbar.windowLabel.borderColor: #C8BC9E
+
+toolbar.clock.appearance: ParentRelative
+toolbar.clock.font: Segoe UI/7/Normal
+toolbar.clock.alignment: Center
+toolbar.clock.textColor: #EBDBB2
+toolbar.clock.marginWidth: 1
+
+toolbar.button.appearance: ParentRelative
+toolbar.button.picColor: #3C3836
+toolbar.button.marginWidth: 0
+
+toolbar.button.pressed.appearance: Flat Solid
+toolbar.button.pressed.color: #7F3300
+toolbar.button.pressed.picColor: #4800FF
+toolbar.button.pressed.marginWidth: 0
+toolbar.button.pressed.borderWidth: 0
+
+! --------------------------------------------------
+
+menu.title.appearance: Flat Solid
+menu.title.color: #3C3836
+menu.title.font: Blank/1/Normal
+menu.title.alignment: Left
+menu.title.textColor: #3C3836
+menu.title.shadowColor: #3C3836
+menu.title.marginWidth: 1
+menu.title.borderWidth: 1
+
+menu.frame.appearance: Flat Solid
+menu.frame.color: #3C3836
+menu.frame.font: Segoe UI/7/Normal
+menu.frame.alignment: Left
+menu.frame.textColor: #EBDBB2
+menu.frame.disabledColor: #6A6F72
+menu.frame.bulletColor: #EBDBB2
+menu.frame.marginWidth: 2
+menu.frame.borderWidth: 2
+menu.frame.borderColor: #282828
+
+menu.active.appearance:  Flat Gradient Vertical
+menu.active.color1: #282828
+menu.active.color2: #282828
+menu.active.textColor: #EBDBB2
+menu.active.bulletColor: #EBDBB2
+menu.active.marginWidth: 5
+menu.active.borderWidth: 1
+menu.active.borderColor: #282828
+
+menu.grip.appearance: Flat Solid
+menu.grip.color: #3C3836
+menu.grip.font: Blank/1/Normal
+menu.grip.alignment: Left
+menu.grip.textColor: #3C3836
+menu.grip.marginWidth: 0
+menu.grip.borderWidth: 0
+
+menu.indicator.appearance: Flat Solid
+menu.indicator.color: #404040
+menu.indicator.marginWidth: 2
+menu.indicator.borderWidth: 2
+
+menu.separator.appearance: Flat Solid
+menu.separator.color: #3C3836
+
+menu.bullet: Comment
+menu.bullet.position: Right
+
+! --------------------------------------------------
+
+dock.appearance: Flat Solid
+dock.color: #3C3836
+dock.marginWidth: 2
+dock.borderWidth: 0
+
+! --------------------------------------------------
+
+console.color: #3C3836
+console.textColor: #EBDBB2
+console.buttonColor: #EBDBB2
+console.font: Segoe UI/9/Normal
+
+! --------------------------------------------------

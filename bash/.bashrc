@@ -2,7 +2,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="\[\e[34m\]|\[\e[00m\]\W\[\e[34m\]|\$(parse_git_branch)|> \[\e[00m\]"
+PS1="\[\e[33m\]|\[\e[34m\]\W\[\e[33m\]|\[\e[32m\]\$(parse_git_branch)\[\e[33m\]|> \[\e[00m\]"
 
 cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
@@ -88,6 +88,7 @@ alias monkey='start firefox https://monkeytype.com/ && exit'
 
 #misc. aliases
 alias editrc='code ~/.bashrc'
+alias editmint='code ~/.minttyrc'
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
 alias cpmintty='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
