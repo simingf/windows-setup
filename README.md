@@ -24,9 +24,9 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Theming:
 
--OldNewExplorer
 -UX Theme Patcher
 -7tsp GUI
+-OldNewExplorer
 -Winaero Tweaker
 -Fira Code (font)
 
@@ -45,6 +45,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Coding:
 
+-Python
 -Java Development Kit
 -Maven
 -NodeJS
@@ -56,12 +57,13 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586
 -UXPatcher to force Windows to accept external themes
--OldNewExplorer to modify explorer appearance
 -7tsp to install system icons
--Winaero Tweaker for system tweaks
+-OldNewExplorer to modify explorer appearance
+-Winaero Tweaker for system tweaks (font / title bar size)
 -Search for themes on Deviant Art (niivu has many good themes)
+-For niivu themes, NA refers to displaying path in explorer
 
--current theme: Macindows (https://www.deviantart.com/niivu/art/Macindows-for-Windows-10-870073866)
+-current theme: GruvBox (https://www.deviantart.com/niivu/art/Gruvbox-for-Windows-10-877449995)
 
 # Firefox Setup:
 
