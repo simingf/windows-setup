@@ -37,7 +37,6 @@ alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias win='cd ~/Documents/Windows-Setup/'
-alias cs='cd ~/Documents/cs32/'
 alias 2front='cs && cd project-2-janagony-kkang11-sfeng22/frontend/table-react/table'
 alias 2back='cs && cd project-2-janagony-kkang11-sfeng22/backend/'
 alias brown='cd ~/OneDrive/Brown/'
@@ -69,11 +68,11 @@ you() {
   }
 
 #school browser aliases
-alias gmail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
+alias mail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start firefox https://canvas.brown.edu/ && exit'
-alias edstem='start firefox https://edstem.org/us/dashboard && exit'
-alias gradescope='start firefox https://www.gradescope.com/ && exit'
-alias cs32='start firefox https://cs.brown.edu/courses/cs0320/ && exit'
+alias ed='start firefox https://edstem.org/us/dashboard && exit'
+alias grade='start firefox https://www.gradescope.com/ && exit'
+alias cs='start firefox https://cs.brown.edu/courses/cs0320/ && exit'
 alias github='start firefox https://github.com/ && exit'
 alias notion='start firefox https://www.notion.so/ && exit'
 alias slack='start firefox https://fullstackatbrown.slack.com/ && exit'
