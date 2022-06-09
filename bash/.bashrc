@@ -2,7 +2,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="\[\e[33m\]|\[\e[34m\]\W\[\e[33m\]|\[\e[32m\]\$(parse_git_branch)\[\e[33m\]|> \[\e[00m\]"
+PS1="\[\033[0;33m\]|\[\033[1;32m\]\W\[\033[0;33m\]|\[\033[1;34m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]"
 
 cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
@@ -15,6 +15,10 @@ alias open='start . && exit' #open folder in file explorer
 alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
+alias size='du -hs'
+alias insize='du -h --max-depth=1'
+
+alias code.='code . && exit'
 
 #git aliases
 gup() { #git update (add commit push)
@@ -37,8 +41,10 @@ alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias win='cd ~/Documents/Windows-Setup/'
-alias 2front='cs && cd project-2-janagony-kkang11-sfeng22/frontend/table-react/table'
-alias 2back='cs && cd project-2-janagony-kkang11-sfeng22/backend/'
+alias cs32='cd ~/Documents/cs32/'
+alias 2front='cs32 && cd project-2-janagony-kkang11-sfeng22/frontend/table-react/table'
+alias 2back='cs32 && cd project-2-janagony-kkang11-sfeng22/backend/'
+alias fsab='cd ~/Documents/FSAB/project-shotokan-karate/'
 alias brown='cd ~/OneDrive/Brown/'
 alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
 alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'
@@ -84,6 +90,8 @@ alias netflix='start firefox https://www.netflix.com/browse && exit'
 alias disney='start firefox https://www.disneyplus.com/home && exit'
 alias reddit='start firefox https://www.reddit.com/ && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
+alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
+alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=0&sort=dd&flow=grid && exit'
 
 #misc. aliases
 alias editrc='code ~/.bashrc'
