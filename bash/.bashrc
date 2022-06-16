@@ -4,7 +4,7 @@ parse_git_branch() {
 
 PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]"
 
-#cat ~/Documents/Windows-Setup/bash/bash_start.txt
+cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
 #general aliases
 alias e='exit'
@@ -17,7 +17,6 @@ alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
 alias insize='du -h --max-depth=1'
-
 alias code.='code . && exit'
 
 #git aliases
@@ -29,32 +28,14 @@ gup() { #git update (add commit push)
 alias gs='git switch'
 alias gp='git pull'
 
-#mvn aliases
-alias mvnp='mvn package'
-alias mvnt='mvn test'
-alias run='./run --gui'
-
 #directory aliases
 alias ..='cd ..'
 alias home='cd ~'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
-alias win='cd ~/Documents/Windows-Setup/'
-alias cs32='cd ~/Documents/cs32/'
-alias 2front='cs32 && cd project-2-janagony-kkang11-sfeng22/frontend/table-react/table'
-alias 2back='cs32 && cd project-2-janagony-kkang11-sfeng22/backend/'
 alias fsab='cd ~/Documents/FSAB/project-shotokan-karate/'
 alias brown='cd ~/OneDrive/Brown/'
-alias sem2='cd ~/OneDrive/Brown/Semester\ 2/'
-alias calc='cd ~/OneDrive/Brown/Semester\ 2/MATH0180\ Multivariable\ Calculus/'
-alias calctxt='calc && start firefox MATH0180\ Textbook.pdf'
-alias calchw='calc && start firefox MATH0180\ HW.pdf'
-alias calcstart='calctxt && calchw && exit'
-alias alg='cd ~/OneDrive/Brown/Semester\ 2/MATH1530\ Abstract\ Algebra/'
-alias algtxt='alg && start firefox MATH1530\ Textbook.pdf'
-alias alghw='alg && start firefox MATH1530\ HW.pdf'
-alias algstart='algtxt && alghw && exit'
 phil() { 
   cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/
   start 0210-2022-LEC$1.pdf
@@ -62,23 +43,22 @@ phil() {
   }
 
 #search functions
-fox() { 
+duck() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://duckduckgo.com/?q=$sq
   exit
   }
-you() { 
+youtube() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://www.youtube.com/results?search_query=$sq
   exit
   }
 
 #school browser aliases
-alias mail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
+alias gmail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
 alias canvas='start firefox https://canvas.brown.edu/ && exit'
-alias ed='start firefox https://edstem.org/us/dashboard && exit'
-alias grade='start firefox https://www.gradescope.com/ && exit'
-alias cs='start firefox https://cs.brown.edu/courses/cs0320/ && exit'
+alias edstem='start firefox https://edstem.org/us/dashboard && exit'
+alias grades='start firefox https://www.gradescope.com/ && exit'
 alias github='start firefox https://github.com/ && exit'
 alias notion='start firefox https://www.notion.so/ && exit'
 alias slack='start firefox https://fullstackatbrown.slack.com/ && exit'
@@ -94,12 +74,13 @@ alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && e
 alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=0&sort=dd&flow=grid && exit'
 
 #misc. aliases
+alias win='cd ~/Documents/Windows-Setup/'
 alias editrc='code ~/.bashrc'
+alias cprc='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
 alias editmint='code ~/.minttyrc'
-alias editreadme='code ~/Documents/Windows-Setup/README.md'
-alias cpbash='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
 alias cpmint='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
+alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
 alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
-alias winupdate='cpbash && cpmint && cphotkeys && cpcalendar && win && gup'
+alias winupdate='cprc && cpmint && cphotkeys && cpcalendar && win && gup'
 alias restart='home && source .bashrc && doc'
