@@ -2,9 +2,9 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="\[\033[0;33m\]|\[\033[1;32m\]\W\[\033[0;33m\]|\[\033[1;34m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]"
+PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]"
 
-cat ~/Documents/Windows-Setup/bash/bash_start.txt
+#cat ~/Documents/Windows-Setup/bash/bash_start.txt
 
 #general aliases
 alias e='exit'
