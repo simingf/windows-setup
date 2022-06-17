@@ -25,8 +25,11 @@ gup() { #git update (add commit push)
   git commit -a -m "$*"
   git push
   }
-alias gs='git switch'
-alias gp='git pull'
+alias pull='git pull'
+alias diff='git diff'
+alias status='git status'
+alias log='git log'
+alias switch='git switch'
 
 #directory aliases
 alias ..='cd ..'
