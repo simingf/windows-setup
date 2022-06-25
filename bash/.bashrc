@@ -18,6 +18,7 @@ alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
 alias insize='du -h --max-depth=1'
 alias code.='code . && exit'
+alias jupyter='jupyter lab'
 
 #git aliases
 gup() { #git update (add commit push)
@@ -25,9 +26,9 @@ gup() { #git update (add commit push)
   git commit -a -m "$*"
   git push
   }
-alias pull='git pull'
-alias diff='git diff'
 alias status='git status'
+alias pull='git pull'
+alias diff='git diff --name-status'
 alias log='git log'
 alias switch='git switch'
 
@@ -78,12 +79,20 @@ alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=
 
 #misc. aliases
 alias win='cd ~/Documents/Windows-Setup/'
+alias editreadme='code ~/Documents/Windows-Setup/README.md'
+
 alias editrc='code ~/.bashrc'
 alias cprc='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
+
 alias editmint='code ~/.minttyrc'
 alias cpmint='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
-alias editreadme='code ~/Documents/Windows-Setup/README.md'
+
+alias edithotkeys='code ~/Documents/hotkeys.ahk'
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
+
+alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
 alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
+
+alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
 alias winupdate='cprc && cpmint && cphotkeys && cpcalendar && win && gup'
-alias restart='home && source .bashrc && doc'
+alias restart='c && home && source .bashrc && doc'
