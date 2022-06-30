@@ -17,8 +17,7 @@ alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
 alias insize='du -h --max-depth=1'
-alias code.='code . && exit'
-alias jupyter='jupyter lab'
+alias jup='jupyter lab'
 
 #git aliases
 gup() { #git update (add commit push)
@@ -35,8 +34,8 @@ alias switch='git switch'
 #directory aliases
 alias ..='cd ..'
 alias home='cd ~'
-alias doc='cd ~/Documents/'
-alias dow='cd ~/Downloads/'
+alias docu='cd ~/Documents/'
+alias down='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias fsab='cd ~/Documents/FSAB/project-shotokan-karate/'
 alias brown='cd ~/OneDrive/Brown/'
@@ -47,12 +46,12 @@ phil() {
   }
 
 #search functions
-duck() { 
+ask() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://duckduckgo.com/?q=$sq
   exit
   }
-youtube() { 
+yout() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://www.youtube.com/results?search_query=$sq
   exit
@@ -94,5 +93,5 @@ alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calend
 alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
 
 alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
-alias winupdate='cprc && cpmint && cphotkeys && cpcalendar && win && gup'
-alias restart='c && home && source .bashrc && doc'
+alias winup='wincp && win && gup'
+alias restart='c && home && source .bashrc && docu'
