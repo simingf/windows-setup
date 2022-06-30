@@ -1,6 +1,6 @@
-# Windows-Setup
+# Windows Setup
 
-Instructions for setting up Windows desktop. Clone this repository into Documents.
+Instructions for setting up Windows desktop. Clone this repository into Documents folder.
 
 # Drivers:
 
