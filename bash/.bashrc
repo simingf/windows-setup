@@ -56,6 +56,10 @@ yout() {
   start firefox https://www.youtube.com/results?search_query=$sq
   exit
   }
+codef() {
+  start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
+  exit
+  }
 
 #school browser aliases
 alias gmail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
