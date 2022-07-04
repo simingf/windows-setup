@@ -1,5 +1,5 @@
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]"
@@ -46,17 +46,17 @@ phil() {
   }
 
 #search functions
-ask() { 
+fox() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://duckduckgo.com/?q=$sq
   exit
   }
-yout() { 
+you() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://www.youtube.com/results?search_query=$sq
   exit
   }
-codef() {
+cf() {
   start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
   exit
   }
