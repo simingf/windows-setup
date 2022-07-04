@@ -51,7 +51,7 @@ fox() {
   start firefox https://duckduckgo.com/?q=$sq
   exit
   }
-you() { 
+yt() { 
   sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
   start firefox https://www.youtube.com/results?search_query=$sq
   exit
