@@ -12,6 +12,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Firefox\
 -Git & Git Bash\
+-TortoiseGit\
 -VSCode\
 -Intellij Ultimate\
 -Wechat\
