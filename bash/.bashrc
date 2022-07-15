@@ -17,6 +17,7 @@ alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
 alias insize='du -h --max-depth=1'
+alias vsc='code && exit'
 alias jup='jupyter lab'
 
 #git aliases
@@ -58,7 +59,7 @@ yt() {
   }
 cf() {
   start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
-  exit
+  vsc
   }
 
 #school browser aliases

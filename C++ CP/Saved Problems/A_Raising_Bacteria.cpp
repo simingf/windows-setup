@@ -19,16 +19,16 @@ using namespace std;
 #define str string
 #define vc vector
 #define vi vc<int>
+#define vvi vc<vi>
 #define pb push_back
 #define umap unordered_map
 #define mp make_pair
-#define ff first
-#define ss second
-const int INF = 1e18;
+#define fi first
+#define se second
+const int INF = 2e18;
 /*Util*/
 #define asc(i,s,e) for(int i=(s);i<=(e);++i)
 #define dsc(i,s,e) for(int i=(s);i>=(e);--i)
-#define each(i,x) for(auto &i:x)
 #define sz(x) ((int)(x).size())
 #define all(x) begin(x), end(x)
 #define rall(x) rbegin(x), rend(x)
@@ -41,10 +41,16 @@ const int INF = 1e18;
 
 /*Code Begins Here*/
 
-
+int x;
 
 void solve() {
-   
+   cin >> x;
+   int count = 0;
+   while(x){
+      if(x&1) count++;
+      x>>=1;
+   }
+   cout<<count;
 }
 
 signed main() {

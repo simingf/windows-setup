@@ -8,10 +8,10 @@ using namespace std;
 /*pair*/ template<typename T, typename S> ostream &operator<<(ostream &os, const pair<T, S> &p){os<<"(";os<<p.first<<", "<<p.second<<")";return os;}
 /*map*/ template<typename T, typename S> ostream &operator<<(ostream &os, const map<T, S> &m){cout<<"{";for(auto &it:m){os<<it;}os<<"}";return os;}
 /*umap*/ template<typename T, typename S> ostream &operator<<(ostream &os, const unordered_map<T, S> &m){cout<<"{";for(auto &it:m){os<<it;}os<<"}";return os;}
-#define dbg(x) cout<<"DEBUG: "<<(#x)<<" = "<<(x)<<"\n";
+#define debug(x) cout<<"DEBUG: "<<(#x)<<" = "<<(x)<<"\n";
 /*IO*/
 /*vector*/ template<typename T> istream &operator>>(istream &is, vector<T> &v){for(auto &i:v){is>>i;}return is;}
-#define fastio ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define fastio ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 #define setd(n) cout.precision(n);cout<<fixed;
 #define endl "\n"
 /*Acronyms*/
@@ -19,16 +19,16 @@ using namespace std;
 #define str string
 #define vc vector
 #define vi vc<int>
+#define vvi vc<vi>
 #define pb push_back
 #define umap unordered_map
 #define mp make_pair
-#define ff first
-#define ss second
-const int INF = 1e18;
+#define fi first
+#define se second
+const int INF = 2e18;
 /*Util*/
 #define asc(i,s,e) for(int i=(s);i<=(e);++i)
 #define dsc(i,s,e) for(int i=(s);i>=(e);--i)
-#define each(i,x) for(auto &i:x)
 #define sz(x) ((int)(x).size())
 #define all(x) begin(x), end(x)
 #define rall(x) rbegin(x), rend(x)
@@ -41,10 +41,26 @@ const int INF = 1e18;
 
 /*Code Begins Here*/
 
-
-
 void solve() {
-   
+   int n; cin >> n;
+   vi v(n); asc(i,0,n-1) cin>>v[i];
+   sort(all(v));
+   int t; cin >> t;
+   while(t--){
+      int tmp; cin >> tmp;
+      int start = 0;
+      int end = n;
+      int half;
+      while(start != end){
+         half = start+(end-start)/2;
+         if(tmp >= v[half]){
+            start=half+1;
+         } else{
+            end=half;
+         }
+      }
+      cout<<start<<endl;
+   }
 }
 
 signed main() {
