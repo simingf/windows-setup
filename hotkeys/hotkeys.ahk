@@ -34,7 +34,8 @@ Run, explorer
 Return
 
 !w::
-Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
+;Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
+Run, wechat
 Return
 
 !n::

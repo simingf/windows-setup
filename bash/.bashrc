@@ -16,7 +16,7 @@ alias count='find . -type f | wc -l' #counts number of files in directory
 alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
-alias insize='du -h --max-depth=1'
+alias insize='du -h --max-depth=1 | sort -h'
 alias vsc='code && exit'
 alias jup='jupyter lab'
 
