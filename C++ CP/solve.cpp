@@ -42,11 +42,7 @@ const int MOD = 1e9+7;
 
 /*Code Begins Here*/
 
-int n;
-int dp[301][301][301];
-
 void solve() {
-   cin>>n;
    
 }
 
