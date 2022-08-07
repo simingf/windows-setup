@@ -21,6 +21,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Microsoft Office (Brown)\
 -Microsoft OneDrive\
 -VLC\
+-Express VPN\
 -Revo Uninstaller
 
 # Firefox Setup:
@@ -35,8 +36,6 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 # Git Bash Setup:
 
 -copy the .bashrc and .minttyrc files from the 'bash' folder into Home directory\
--use cpbash to update the .bashrc file in 'bash' with the bashrc file in Home\
--use cpmint to update the .minttyrc file in 'bash' with the minttyrc file in Home
 
 # Games:
 
@@ -95,14 +94,13 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Java Development Kit\
 -Node.js\
 -Typescript\
--React\
+-React
 
 # VSCode Setup: (extensions)
 
 -AutoHotkey\
 -Better C++ Syntax\
 -C/C++\
--C#\
 -Catalyst\
 -Code Runner\
 -GitLens\
