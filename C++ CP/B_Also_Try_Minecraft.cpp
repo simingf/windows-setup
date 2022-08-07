@@ -42,12 +42,39 @@ const int MOD = 1e9+7;
 
 /*Code Begins Here*/
 
-int n;
-int dp[301][301][301];
+int n,m;
+int s,e;
 
 void solve() {
-   cin>>n;
-   
+   cin>>n>>m;
+   int h[n+1];
+   asc(i,1,n) cin>>h[i];
+   int right[n+1];
+   right[1]=0;
+   asc(i,2,n){
+      if(h[i]<h[i-1]){
+         right[i]=right[i-1]+h[i-1]-h[i];
+      }else{
+         right[i]=right[i-1];
+      }
+   }
+   int left[n+1];
+   left[n]=0;
+   dsc(i,n-1,1){
+      if(h[i]<h[i+1]){
+         left[i]=left[i+1]+h[i+1]-h[i];
+      }else{
+         left[i]=left[i+1];
+      }
+   }
+   asc(i,1,m){
+      cin>>s>>e;
+      if(s<e){
+         cout<<right[e]-right[s]<<endl;
+      }else{
+         cout<<left[e]-left[s]<<endl;
+      }
+   }
 }
 
 signed main() {

@@ -6,20 +6,22 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Nvidia Geforce Drivers\
 -Dell Display Manager\
--Intel Driver & Support Assistant
+-Intel Driver & Support Assistant\
+-Logitech G Hub
 
 # Windows Programs:
 
 -Firefox\
 -Git & Git Bash\
--TortoiseGit\
 -VSCode\
--Intellij Ultimate\
 -Wechat\
--Discord\
+-Discord & BetterDiscord\
 -Zoom\
 -Microsoft Todo (MS Store)\
--Microsoft Office (Brown)
+-Microsoft Office (Brown)\
+-Microsoft OneDrive\
+-VLC\
+-Revo Uninstaller
 
 # Firefox Setup:
 
@@ -41,14 +43,16 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Battle.net & Overwatch\
 -Valorant\
 -Steam\
--Epic Games
+-Epic Games\
+-Vortex
 
 # Utilites:
 
 -AutoHotKey\
--FancyWM (MS Store)\
--PowerToys Run\
--Rainmeter (Ultra Calendar)
+-PowerToys\
+-Rainmeter (Ultra Calendar)\
+-TortoiseGit\
+-7 Zip
 
 # HotKeys Setup:
 
@@ -67,7 +71,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Theming:
 
--UX Theme Patcher\
+-Ultra UX Theme Patcher\
 -7tsp GUI\
 -OldNewExplorer\
 -Fira Code (font)
@@ -76,7 +80,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586\
 -UXPatcher to force Windows to accept external themes\
--7tsp to install system icons\
+-7tsp to apply system icons\
 -OldNewExplorer to modify explorer appearance\
 -Search for themes on Deviant Art (niivu has many good themes)\
 -For niivu themes, NA refers to displaying path in explorer
@@ -89,10 +93,9 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Python\
 -Jupyter Lab\
 -Java Development Kit\
--NodeJS\
+-Node.js\
 -Typescript\
 -React\
--Selenium
 
 # VSCode Setup: (extensions)
 
@@ -114,13 +117,3 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -TabOut\
 -TODO Highlight\
 -vscode-icons
-
-# Intellij Setup: (extensions)
-
--atom material icons\
--checkstyle\
--git tool box\
--gruvbox theme\
--javadoc\
--save actions\
--selenium UI testing

@@ -42,13 +42,52 @@ const int MOD = 1e9+7;
 
 /*Code Begins Here*/
 
-int n;
-int dp[301][301][301];
+int n,m,q,xs,ys,xf,yf,k;
 
 void solve() {
-   cin>>n;
-   
+   cin>>n>>m;
+   int h[m+1];
+   asc(i,1,m){cin>>h[i];}
+   cin>>q;
+   while(q--){
+      cin>>xs>>ys>>xf>>yf>>k;
+      if(ys>yf){
+         int tmp;
+         tmp=xs;
+         xs=xf;
+         xf=tmp;
+         tmp=ys;
+         ys=yf;
+         yf=tmp;
+      }
+      if((yf-ys)%k!=0){
+         cout<<"NO"<<endl;
+         continue;
+      }
+      if((xf-xs)%k!=0){
+         cout<<"NO"<<endl;
+         continue;
+      }
+      xs = n-n%k+xs%k;
+      if(xs>n)xs-=k;
+      // while(xs+k<=n){
+      //    xs+=k;
+      // }
+      bool success = true;
+      asc(i,ys+1,yf){
+         if(h[i]>=xs){
+            success=false;
+            break;
+         }
+      }
+      if(success){
+         cout<<"YES"<<endl;
+      }else{
+         cout<<"NO"<<endl;
+      }
+   }
 }
+
 
 signed main() {
    fastio;

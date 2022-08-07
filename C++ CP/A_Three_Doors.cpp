@@ -42,16 +42,23 @@ const int MOD = 1e9+7;
 
 /*Code Begins Here*/
 
-int n;
-int dp[301][301][301];
+int x;
+int a[3];
 
 void solve() {
-   cin>>n;
-   
+   cin>>x;
+   cin>>a[0]>>a[1]>>a[2];
+   if(a[x-1]==0){
+      cout<<"NO";
+   }else if(a[a[x-1]-1]==0){
+      cout<<"NO";
+   }else{
+      cout<<"YES";
+   }
 }
 
 signed main() {
    fastio;
-   test;
+   tests;
    return 0;
 }
