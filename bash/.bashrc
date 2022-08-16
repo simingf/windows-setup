@@ -35,12 +35,12 @@ alias switch='git switch'
 #directory aliases
 alias ..='cd ..'
 alias home='cd ~'
-alias docu='cd ~/Documents/'
-alias down='cd ~/Downloads/'
-alias desk='cd ~/Desktop/'
+alias doc='cd ~/Documents/'
+alias dow='cd ~/Downloads/'
+alias des='cd ~/Desktop/'
 alias fsab='cd ~/Documents/FSAB/project-shotokan-karate/'
 alias brown='cd ~/OneDrive/Brown/'
-phil() { 
+phil() {
   cd ~/OneDrive/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/
   start 0210-2022-LEC$1.pdf
   exit
