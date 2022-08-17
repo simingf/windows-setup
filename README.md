@@ -4,25 +4,27 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Drivers:
 
--Nvidia Geforce Drivers\
--Dell Display Manager\
+-Razer Synapse\
+-Nvidia Geforce Experience\
+-Dell S2721DGF Monitor Driver\
 -Intel Driver & Support Assistant\
 -Logitech G Hub
 
 # Windows Programs:
 
 -Firefox\
--Git & Git Bash\
 -VSCode\
+-Git & Git Bash\
+-TortoiseGit\
 -Wechat\
 -Discord & BetterDiscord\
 -Zoom\
+-VLC\
+-Express VPN\
+-Revo Uninstaller\
 -Microsoft Todo (MS Store)\
 -Microsoft Office (Brown)\
 -Microsoft OneDrive\
--VLC\
--Express VPN\
--Revo Uninstaller
 
 # Firefox Setup:
 
@@ -37,20 +39,11 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -copy the .bashrc and .minttyrc files from the 'bash' folder into Home directory\
 
-# Games:
-
--Battle.net & Overwatch\
--Valorant\
--Steam\
--Epic Games\
--Vortex
-
 # Utilites:
 
 -AutoHotKey\
 -PowerToys\
 -Rainmeter (Ultra Calendar)\
--TortoiseGit\
 -7 Zip
 
 # HotKeys Setup:
@@ -68,6 +61,14 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -git bash: alias app='doc && start app && exit'\
 -autohotkey: Run, app /newline/ Return
 
+# Games:
+
+-Battle.net & Overwatch\
+-Valorant\
+-Steam\
+-Epic Games\
+-Vortex
+
 # Theming:
 
 -Ultra UX Theme Patcher\
@@ -78,7 +79,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 # Theme Setup:
 
 -Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586\
--UXPatcher to force Windows to accept external themes\
+-SecureUXTheme to force Windows to accept external themes\
 -7tsp to apply system icons\
 -OldNewExplorer to modify explorer appearance\
 -Search for themes on Deviant Art (niivu has many good themes)\
@@ -95,23 +96,3 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Node.js\
 -Typescript\
 -React
-
-# VSCode Setup: (extensions)
-
--AutoHotkey\
--Better C++ Syntax\
--C/C++\
--Catalyst\
--Code Runner\
--GitLens\
--indent-rainbow\
--IntelliCode\
--Kary Pro Colors\
--Markdown All in One\
--Noctis\
--Pylance\
--Python\
--Rainbow CSV\
--TabOut\
--TODO Highlight\
--vscode-icons

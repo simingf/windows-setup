@@ -1,4 +1,4 @@
-FontHeight=22
+FontHeight=18
 ClipShortcuts=no
 WindowShortcuts=no
 ZoomShortcuts=no
@@ -13,7 +13,7 @@ CursorBlinks=no
 ClearSelectionOnInput=yes
 Rows=20
 Scrollbar=none
-Columns=40
+Columns=45
 OpaqueWhenFocused=no
 RightClickAction=paste
 MiddleClickAction=void
