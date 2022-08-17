@@ -83,9 +83,16 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -7tsp to apply system icons\
 -OldNewExplorer to modify explorer appearance\
 -Search for themes on Deviant Art (niivu has many good themes)\
--For niivu themes, NA refers to displaying path in explorer
+-Alt = different style of buttons at top right corner of windows\
+-NA = path not displayed in explorer
 
 -current theme: GruvBox (https://www.deviantart.com/niivu/art/Gruvbox-for-Windows-10-877449995)\
+
+# Notepad Background Color:
+
+-Open Registry Editor\
+-Go to HKEY_CURRENT_USER\Control Panel\Colors\
+-Edit value of Window parameter
 
 # Coding:
 
@@ -96,3 +103,4 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Node.js\
 -Typescript\
 -React
+-Orange
