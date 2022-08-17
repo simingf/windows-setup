@@ -78,20 +78,21 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Theme Setup:
 
--Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586 \
+-refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586 \
 -SecureUXTheme to force Windows to accept external themes \
 -7tsp to apply system icons \
 -OldNewExplorer to modify explorer appearance \
--Search for themes on Deviant Art (niivu has many good themes) \
+-search for themes on Deviant Art (niivu has many good themes) \
 -Alt = different style of buttons at top right corner of windows \
--NA = path not displayed in explorer \
+-NA = path not displayed in explorer
+
 -current theme: GruvBox (https://www.deviantart.com/niivu/art/Gruvbox-for-Windows-10-877449995)
 
 # Notepad Background Color:
 
--Open Registry Editor \
--Go to HKEY_CURRENT_USER\Control Panel\Colors \
--Edit value of Window parameter
+-open Registry Editor \
+-go to HKEY_CURRENT_USER\Control Panel\Colors \
+-edit value of Window parameter
 
 # Coding:
 
