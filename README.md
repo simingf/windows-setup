@@ -4,11 +4,11 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Drivers:
 
--Razer Synapse\
--Nvidia Geforce Experience\
--Dell S2721DGF Monitor Driver\
--Intel Driver & Support Assistant\
--Logitech G Hub
+-Razer Synapse \
+-Nvidia Geforce Experience \
+-Dell S2721DGF Monitor Driver \
+-Intel Driver & Support Assistant \
+-Logitech G Hub \
 
 # Windows Programs:
 
@@ -24,7 +24,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Revo Uninstaller\
 -Microsoft Todo (MS Store)\
 -Microsoft Office (Brown)\
--Microsoft OneDrive\
+-Microsoft OneDrive
 
 # Firefox Setup:
 
@@ -37,7 +37,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Git Bash Setup:
 
--copy the .bashrc and .minttyrc files from the 'bash' folder into Home directory\
+-copy the .bashrc and .minttyrc files from the 'bash' folder into Home directory
 
 # Utilites:
 
@@ -71,14 +71,14 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 # Theming:
 
--Ultra UX Theme Patcher\
+-SecureUXTheme\
 -7tsp GUI\
 -OldNewExplorer\
 -Fira Code (font)
 
 # Theme Setup:
 
--Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586\
+-Refer to this guide: https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586
 -SecureUXTheme to force Windows to accept external themes\
 -7tsp to apply system icons\
 -OldNewExplorer to modify explorer appearance\
