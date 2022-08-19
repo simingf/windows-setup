@@ -43,7 +43,7 @@ const int MOD = 1e9+7;
 /*Code Begins Here*/
 
 void solve() {
-   
+   cout<<"Hello";
 }
 
 signed main() {
