@@ -32,6 +32,10 @@ alias diff='git diff --name-status'
 alias log='git log'
 alias switch='git switch'
 
+#virtualenv aliases
+alias venv='virtualenv -p python3'
+alias activate='source Scripts/activate'
+
 #directory aliases
 alias ..='cd ..'
 alias home='cd ~'
@@ -99,4 +103,4 @@ alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.i
 
 alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
 alias winup='wincp && win && gup'
-alias restart='c && home && source .bashrc && docu'
+alias restart='c && home && source .bashrc && doc'
