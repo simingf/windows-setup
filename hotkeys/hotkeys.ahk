@@ -3,6 +3,10 @@
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
+!Esc::
+WinClose A
+Return
+
 !Enter::
 Run, C:\Program Files\Git\git-bash.exe
 Return
