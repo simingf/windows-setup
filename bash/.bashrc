@@ -77,7 +77,7 @@ alias slack='start firefox https://fullstackatbrown.slack.com/ && exit'
 
 #chill browser aliases
 alias music='start firefox https://music.apple.com/library/recently-added && exit'
-alias lofi='start firefox https://www.youtube.com/watch?v=5qap5aO4i9A && exit'
+alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit'
 alias disney='start firefox https://www.disneyplus.com/home && exit'
 alias reddit='start firefox https://www.reddit.com/ && exit'
