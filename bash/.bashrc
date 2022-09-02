@@ -17,6 +17,7 @@ alias hist='history | grep' #grep history
 alias left='ls -t -1' #list by modification time (where I 'left' off)
 alias size='du -hs'
 alias insize='du -h --max-depth=1 | sort -h'
+alias hash='doc && start hashtwm.exe -m a -a mintty -a MozillaWindowClass -a Chrome_WidgetWin_1 -a Notepad -a WeChatMainWndForPC'
 alias vsc='code && exit'
 alias jup='jupyter lab'
 

@@ -3,20 +3,6 @@
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
-!Esc::
-WinGetActiveTitle, Title
-IfInString, Title, /usr/bin/bash
-{
-Send !{Backspace}
-Send exit
-Send {Enter}
-}
-Else
-{
-Send !{F4}
-}
-Return
-
 !Enter::
 Run, C:\Program Files\Git\git-bash.exe
 Return
@@ -41,3 +27,7 @@ Return
 !n::
 Run, notepad
 Return
+
+;!z::
+;WinGetClass, class, A
+;MsgBox, The active window's class is "%class%".
