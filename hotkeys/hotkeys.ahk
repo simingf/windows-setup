@@ -5,33 +5,57 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 !Esc::
 WinClose A
-Return
-
-!Enter::
-Run, C:\Program Files\Git\git-bash.exe
-Return
-
-!+Enter::
-Run, firefox
 return
 
-!t::
-Run, todo
-Return
+!f::
+IfWinExist ahk_class MozillaWindowClass
+	winactivate ahk_class MozillaWindowClass
+else
+	run, firefox
+return
+
+!d::
+IfWinExist ahk_class ApplicationFrameWindow
+	winactivate ahk_class ApplicationFrameWindow
+else
+	run, todo
+return
 
 !e::
-Run, explorer
-Return
+IfWinExist ahk_class CabinetWClass
+	winactivate ahk_class CabinetWClass
+else
+	run, explorer
+return
 
-!w::
-;Run, C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
-Run, wechat
-Return
+!j::
+IfWinExist ahk_class mintty
+	winactivate ahk_class mintty
+else
+	run, "C:\Program Files\Git\git-bash.exe"
+return
+
+!k::
+IfWinExist ahk_class Chrome_WidgetWin_1
+	winactivate ahk_class Chrome_WidgetWin_1
+else
+	run, "C:\Users\Simin\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+return
 
 !n::
-Run, notepad
-Return
+IfWinExist ahk_class Notepad
+	winactivate ahk_class Notepad
+else
+	run, notepad
+return
 
-;!z::
+!m::
+IfWinExist ahk_class WeChatMainWndForPC
+	winactivate ahk_class WeChatMainWndForPC
+else
+	run, wechat
+return
+
+;!c::
 ;WinGetClass, class, A
-;MsgBox, The active window's class is "%class%".
+;clipboard := class
