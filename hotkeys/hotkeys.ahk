@@ -56,6 +56,13 @@ else
 	run, wechat
 return
 
+!w::
+IfWinExist ahk_class WeChatMainWndForPC
+	winactivate ahk_class WeChatMainWndForPC
+else
+	run, wechat
+return
+
 ;!c::
 ;WinGetClass, class, A
 ;clipboard := class
