@@ -24,22 +24,23 @@ alias twm='doc && start hashtwm.exe -a mintty -a Chrome_WidgetWin_1 -a Notepad -
 
 #git aliases
 g() { #git
-  if [[ $@ == "" ]]
+  if [[ $* == "" ]]
   then
     git status
-  elif [[ $@ == "up" ]]
+  elif [[ $1 == "up" ]]
   then
-    git add -A
+    shift #remove first argument from $*
+    git add --all
     git commit -a -m "$*"
     git push
-  elif [[ $@ == "diff" ]]
+  elif [[ $* == "diff" ]]
   then
     git diff --name-status
-  elif [[ $@ == "branch" ]]
+  elif [[ $* == "branch" ]]
   then
     git branch -vv
   else
-    git $@
+    git $*
   fi
 }
 
