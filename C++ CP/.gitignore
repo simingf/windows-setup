@@ -1,4 +1,4 @@
-.catalyst
-.temp
-.vscode
+.catalyst/
+.temp/
+.vscode/
 solve.exe
