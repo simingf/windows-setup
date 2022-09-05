@@ -24,29 +24,28 @@ alias twm='doc && start hashtwm.exe -a mintty -a Chrome_WidgetWin_1 -a Notepad -
 
 #git aliases
 g() { #git
-  if [[ $* == "" ]]
+  if [[ "$@" == "" ]]
   then
     git status
-  elif [[ $1 == "up" ]]
+  elif [[ "$1" == "up" ]]
   then
-    shift #remove first argument from $*
+    shift #remove first argument
     git add --all
-    git commit -a -m "$*"
+    git commit -a -m "$@"
     git push
-  elif [[ $* == "diff" ]]
+  elif [[ "$@" == "diff" ]]
   then
     git diff --name-status
-  elif [[ $* == "branch" ]]
+  elif [[ "$@" == "branch" ]]
   then
     git branch -vv
   else
-    git $*
+    git "$@"
   fi
 }
 
-#python virtualenv aliases
-alias venv='virtualenv -p python3'
-alias activate='source Scripts/activate'
+#python venv aliases
+alias activate='source venv/Scripts/activate'
 
 #directory aliases
 alias ..='cd ..'
@@ -55,11 +54,7 @@ alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias brown='cd ~/Documents/00Siming/Brown/'
-phil() {
-  cd ~/Documents/00Siming/Brown/Semester\ 2/PHIL0210\ Early\ Modern\ Philosophy/Lecture\ Notes/
-  start 0210-2022-LEC$1.pdf
-  exit
-  }
+alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
 
 #search functions
 fox() { 
@@ -74,7 +69,8 @@ yt() {
   }
 cf() { #input: page number
   start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
-  vsc
+  cpp
+  exit
   }
 
 #school browser aliases
@@ -108,6 +104,6 @@ alias cprc='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc update
 alias cpmint='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
 alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
 alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
-alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
 
+alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
 alias winup='wincp && win && gup'
