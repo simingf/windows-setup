@@ -23,17 +23,25 @@ alias restart='home && source .bashrc && doc'
 alias twm='doc && start hashtwm.exe -a mintty -a Chrome_WidgetWin_1 -a Notepad -a WeChatMainWndForPC'
 
 #git aliases
-gup() { #git update (add commit push)
-  git add -A
-  git commit -a -m "$*"
-  git push
-  }
-alias status='git status'
-alias diff='git diff --name-status'
-alias log='git log'
-alias branch='git branch -vva'
-alias switch='git switch'
-alias pull='git pull'
+g() { #git
+  if [[ $@ == "" ]]
+  then
+    git status
+  elif [[ $@ == "up" ]]
+  then
+    git add -A
+    git commit -a -m "$*"
+    git push
+  elif [[ $@ == "diff" ]]
+  then
+    git diff --name-status
+  elif [[ $@ == "branch" ]]
+  then
+    git branch -vv
+  else
+    git $@
+  fi
+}
 
 #python virtualenv aliases
 alias venv='virtualenv -p python3'
