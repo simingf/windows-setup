@@ -2,3 +2,5 @@
 .temp/
 .vscode/
 solve.exe
+*.cpp
+!solve.cpp
