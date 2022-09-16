@@ -1,6 +1,5 @@
 .catalyst/
 .temp/
 .vscode/
-solve.exe
+*.exe
 *.cpp
-!solve.cpp
