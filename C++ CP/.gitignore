@@ -3,3 +3,6 @@
 .vscode/
 *.exe
 *.cpp
+!Reading/*
+!Saved_Problems/*
+!Template/*
