@@ -19,11 +19,8 @@ alias size='du -hs'
 alias insize='du -h --max-depth=1 | sort -h'
 alias restart='home && source .bashrc && doc'
 
-#hashtwm startup
-alias twm='doc && start hashtwm.exe -a mintty -a Chrome_WidgetWin_1 -a Notepad -a WeChatMainWndForPC'
-
-#git aliases
-g() { #git
+#git alias
+g() {
   if [[ "$@" == "" ]]
   then
     git status
@@ -44,6 +41,9 @@ g() { #git
   fi
 }
 
+#virtualbox alias
+alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
+
 #python venv aliases
 alias activate='source venv/Scripts/activate'
 
@@ -54,35 +54,22 @@ alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias desk='cd ~/Desktop/'
 alias brown='cd ~/Documents/00Siming/Brown/'
-alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
 
-#search functions
+#search function
 fox() { 
-  sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
-  start firefox https://duckduckgo.com/?q=$sq
+  start firefox "$1"
   exit
-  }
-yt() { 
-  sq=$(sed 's/ /+/g' <<< "$*") #support multi-word searches
-  start firefox https://www.youtube.com/results?search_query=$sq
-  exit
-  }
+}
+
+#competitive programming
+alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
 cf() { #input: page number
   start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
-  cpp
   exit
   }
 
-#school browser aliases
-alias gmail='start firefox https://mail.google.com/mail/u/0/#inbox && exit'
-alias canvas='start firefox https://canvas.brown.edu/ && exit'
-alias edstem='start firefox https://edstem.org/us/dashboard && exit'
-alias grades='start firefox https://www.gradescope.com/ && exit'
+#browser
 alias github='start firefox https://github.com/ && exit'
-alias notion='start firefox https://www.notion.so/ && exit'
-
-#chill browser aliases
-alias music='start firefox https://music.apple.com/library/recently-added && exit'
 alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk && exit'
 alias netflix='start firefox https://www.netflix.com/browse && exit'
 alias disney='start firefox https://www.disneyplus.com/home && exit'
@@ -91,19 +78,17 @@ alias monkey='start firefox https://monkeytype.com/ && exit'
 alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
 alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=0&sort=dd&flow=grid && exit'
 
-#windows-setup aliases
+#windows-setup
 alias win='cd ~/Documents/Windows-Setup/'
-
 alias editreadme='code ~/Documents/Windows-Setup/README.md'
 alias editrc='code ~/.bashrc'
 alias editmint='code ~/.minttyrc'
 alias edithotkeys='code ~/Documents/hotkeys.ahk'
 alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
-
-alias cprc='cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"' #copy bashrc to windows-setup folder
-alias cpmint='cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"'
-alias cphotkeys='cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"' #copy hotkeys to windows-setup folder
-alias cpcalendar='cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"'
-
-alias wincp='cprc && cpmint && cphotkeys && cpcalendar'
-alias winup='wincp && win && gup'
+wincp() {
+  cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"
+  cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"
+  cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"
+  cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"
+}
+alias winup='wincp && win && g up'
