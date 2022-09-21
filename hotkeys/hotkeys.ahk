@@ -14,7 +14,7 @@ else
 	run, firefox
 return
 
-!d::
+!t::
 IfWinExist ahk_class ApplicationFrameWindow
 	winactivate ahk_class ApplicationFrameWindow
 else
@@ -63,6 +63,24 @@ else
 	run, wechat
 return
 
-;!c::
-;WinGetClass, class, A
-;clipboard := class
+;!d:: TODO: discord (same class as vscode)
+
+!z::
+IfWinExist ahk_class ZPContentViewWndClass
+	winactivate ahk_class ZPContentViewWndClass
+else
+	run, "C:\Users\Simin\AppData\Roaming\Zoom\bin\Zoom.exe"
+return
+
+!v::
+IfWinExist ahk_class UnrealWindow
+	winactivate ahk_class UnrealWindow
+else
+	run, valorant
+return
+
+
+
+!c::
+WinGetClass, class, A
+clipboard := class
