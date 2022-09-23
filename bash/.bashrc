@@ -41,8 +41,9 @@ g() {
   fi
 }
 
-#virtualbox alias
+#CS33 aliases
 alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
+alias 33='doc && cd CS33'
 
 #python venv aliases
 alias activate='source venv/Scripts/activate'
