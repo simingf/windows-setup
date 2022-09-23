@@ -49,37 +49,12 @@ else
 	run, notepad
 return
 
-!m::
-IfWinExist ahk_class WeChatMainWndForPC
-	winactivate ahk_class WeChatMainWndForPC
-else
-	run, wechat
-return
-
 !w::
 IfWinExist ahk_class WeChatMainWndForPC
 	winactivate ahk_class WeChatMainWndForPC
 else
 	run, wechat
 return
-
-;!d:: TODO: discord (same class as vscode)
-
-!z::
-IfWinExist ahk_class ZPContentViewWndClass
-	winactivate ahk_class ZPContentViewWndClass
-else
-	run, "C:\Users\Simin\AppData\Roaming\Zoom\bin\Zoom.exe"
-return
-
-!v::
-IfWinExist ahk_class UnrealWindow
-	winactivate ahk_class UnrealWindow
-else
-	run, valorant
-return
-
-
 
 !c::
 WinGetClass, class, A
