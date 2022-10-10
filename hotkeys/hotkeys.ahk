@@ -35,6 +35,10 @@ else
 	run, "C:\Program Files\Git\git-bash.exe"
 return
 
+!+j::
+run, "C:\Program Files\Git\git-bash.exe"
+return
+
 !k::
 IfWinExist ahk_class Chrome_WidgetWin_1
 	winactivate ahk_class Chrome_WidgetWin_1
@@ -56,6 +60,6 @@ else
 	run, wechat
 return
 
-!c::
+!g::
 WinGetClass, class, A
 clipboard := class
