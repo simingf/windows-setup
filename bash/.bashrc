@@ -20,7 +20,7 @@ alias insize='du -h --max-depth=1 | sort -h' #size of all contained directories
 alias grep='grep --color=auto'               #colorize grep
 alias hist='history | grep'                  #grep history
 alias count='find . -type f | wc -l'         #counts number of files in directory
-alias restart='home && source .bashrc && doc'
+alias restart='cd && source .bashrc && doc'
 
 cd() {
     DIR="$*";
@@ -89,16 +89,16 @@ alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && e
 alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=0&sort=dd&flow=grid && exit'
 
 #windows-setup
-alias win='cd ~/Documents/Windows-Setup/'
-alias editreadme='code ~/Documents/Windows-Setup/README.md'
-alias editrc='code ~/.bashrc'
-alias editmint='code ~/.minttyrc'
-alias edithotkeys='code ~/Documents/hotkeys.ahk'
-alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
 wincp() {
     cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"
     cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"
     cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"
     cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"
 }
+alias win='cd ~/Documents/Windows-Setup/ && wincp'
+alias editreadme='code ~/Documents/Windows-Setup/README.md'
+alias editrc='code ~/.bashrc'
+alias editmint='code ~/.minttyrc'
+alias edithotkeys='code ~/Documents/hotkeys.ahk'
+alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
 alias winup='wincp && win && g up'
