@@ -4,7 +4,7 @@ parse_git_branch() {
 
 PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]" #show current directory before command
 
-PROMPT_COMMAND="export PROMPT_COMMAND=echo" #print new line after every command
+#PROMPT_COMMAND="export PROMPT_COMMAND=echo" #print new line after every command
 
 echo "-Welcome, Siming-"
 
@@ -28,7 +28,7 @@ cd() {
     if [ $# -lt 1 ]; then
         DIR=$HOME;
     fi;
-    builtin cd "${DIR}" && ls
+    builtin cd "${DIR}" && ls;
 }
 
 #vscode
@@ -59,7 +59,7 @@ alias v='vagrant'
 
 #DL aliases
 . /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
-alias dl='doc && cd DL && conda activate 1470'
+alias dl='doc && cd DL && conda activate cs1470'
 alias deact='conda deactivate'
 
 #32TA aliases
