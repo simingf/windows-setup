@@ -7,6 +7,13 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 WinClose A
 return
 
+!s::
+IfWinExist ahk_class Chrome_WidgetWin_0
+	winactivate ahk_class Chrome_WidgetWin_0
+else
+	run, "C:\Users\Simin\AppData\Roaming\Spotify\Spotify.exe"
+return
+
 !f::
 IfWinExist ahk_class MozillaWindowClass
 	winactivate ahk_class MozillaWindowClass
