@@ -20,7 +20,7 @@ alias insize='du -h --max-depth=1 | sort -h' #size of all contained directories
 alias grep='grep --color=auto'               #colorize grep
 alias hist='history | grep'                  #grep history
 alias count='find . -type f | wc -l'         #counts number of files in directory
-alias restart='cd && source .bashrc && doc'
+alias restart='c && builtin cd && source .bashrc && doc'
 
 cd() {
     DIR="$*";
@@ -51,6 +51,9 @@ g() {
         git "$@"
     fi
 }
+
+#python alias
+alias pytest='doc && builtin cd pytest && vsc'
 
 #CS33 aliases
 alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
