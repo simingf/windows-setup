@@ -4,9 +4,21 @@ parse_git_branch() {
 
 PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]" #show current directory before command
 
-#PROMPT_COMMAND="export PROMPT_COMMAND=echo" #print new line after every command
-
 echo "-Welcome, Siming-"
+
+# mappings to have up and down arrow searching through history:
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# mapping to have [Tab] and [Shift]+[Tab] to cycle through all the possible completions:
+bind '"\t": menu-complete'
+bind '"\e[Z": menu-complete-backward'
+# first tab lists all choices
+bind "set show-all-if-ambiguous on"
+# first tab fills up to difference instead of selecting first option
+bind "set menu-complete-display-prefix on" 
+# case insensitive
+bind "set completion-ignore-case on"
 
 #general aliases
 alias e='exit'
@@ -26,13 +38,11 @@ cd() {
     DIR="$*";
     # if no DIR given, go home
     if [ $# -lt 1 ]; then
-        DIR=$HOME;
+        builtin cd $HOME;
+    else
+        builtin cd "${DIR}" && ls;
     fi;
-    builtin cd "${DIR}" && ls;
 }
-
-#vscode
-alias vsc='code . && exit'
 
 #git alias
 g() {
@@ -52,18 +62,20 @@ g() {
     fi
 }
 
+#vscode
+alias vsc='code . && exit'
+
 #python alias
 alias pytest='doc && builtin cd pytest && vsc'
 
 #CS33 aliases
-alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
 alias 33='doc && cd CS33'
 alias v='vagrant'
+alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
 
 #DL aliases
+alias dl='doc && cd DL'
 . /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
-alias dl='doc && cd DL && conda activate cs1470'
-alias deact='conda deactivate'
 
 #32TA aliases
 alias mvnp='mvn package'
