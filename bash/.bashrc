@@ -6,31 +6,33 @@ PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[0
 
 echo "-Welcome, Siming-"
 
-# mappings to have up and down arrow searching through history:
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+# mapping to have up and down arrows search commands in history that match currently typed
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
 # mapping to have [Tab] and [Shift]+[Tab] to cycle through all the possible completions:
 bind '"\t": menu-complete'
 bind '"\e[Z": menu-complete-backward'
-# first tab lists all choices
-bind "set show-all-if-ambiguous on"
-# first tab fills up to difference instead of selecting first option
+# when on: first tab lists all choices
+bind "set show-all-if-ambiguous off"
+# when on: first tab fills up to difference instead of selecting first option
 bind "set menu-complete-display-prefix on" 
-# case insensitive
+# when on: case insensitive
 bind "set completion-ignore-case on"
 
 #general aliases
 alias e='exit'
 alias c='clear'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
-alias rm='rm -rf'                            #rm removes folders
+alias rm='rm -rv'                            #rm removes folders
 alias open='start . && exit'                 #open folder in file explorer
 alias left='ls -t -1'                        #list by modification time (where I 'left' off)
 alias size='du -hs'                          #size of current directory
-alias insize='du -h --max-depth=1 | sort -h' #size of all contained directories
-alias grep='grep --color=auto'               #colorize grep
-alias hist='history | grep'                  #grep history
+alias sizes='du -h --max-depth=1 | sort -h'  #size of all contained directories
+alias find.='ls | grep'                      #grep in current directory
+alias grep='grep --color=auto --ignore-case' #colorize grep
+alias hist='history | grep'                  #grep command history
+alias clrhist='history -c && history -w'     #clear command history
 alias count='find . -type f | wc -l'         #counts number of files in directory
 alias restart='c && builtin cd && source .bashrc && doc'
 
@@ -84,10 +86,10 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 
 #directory aliases
 alias ..='cd ..'
-alias doc='builtin cd ~/Documents/'
-alias dow='builtin cd ~/Downloads/'
-alias desk='builtin cd ~/Desktop/'
-alias brown='cd ~/Documents/00Siming/Brown/'
+alias doc='clear && builtin cd ~/Documents/'
+alias dow='clear && builtin cd ~/Downloads/'
+alias desk='clear && builtin cd ~/Desktop/'
+alias brown='clear && cd ~/Documents/00Siming/Brown/'
 
 #competitive programming
 alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
@@ -97,6 +99,10 @@ cf() { #input: page number
 }
 
 #browser
+cs() { #input: course id
+    start firefox https://cs.brown.edu/courses/csci$1/
+    exit
+}
 alias github='start firefox https://github.com/ && exit'
 alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
@@ -105,15 +111,16 @@ alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=
 
 #windows-setup
 wincp() {
-    cp ~/.bashrc ~/Documents/Windows-Setup/bash/ && echo ".bashrc updated"
-    cp ~/.minttyrc ~/Documents/Windows-Setup/bash/ && echo ".minttyrc updated"
-    cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/ && echo "hotkeys updated"
-    cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/rainmeter && echo "ultra calendar updated"
+    cp ~/.bashrc ~/Documents/Windows-Setup/bash/
+    cp ~/.minttyrc ~/Documents/Windows-Setup/bash/
+    cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/
+    cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/Rainmeter
+    echo "setup files copied!"
 }
 alias win='cd ~/Documents/Windows-Setup/ && wincp'
-alias editreadme='code ~/Documents/Windows-Setup/README.md'
+alias editmd='code ~/Documents/Windows-Setup/README.md'
 alias editrc='code ~/.bashrc'
 alias editmint='code ~/.minttyrc'
-alias edithotkeys='code ~/Documents/hotkeys.ahk'
-alias editcalendar='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
-alias winup='wincp && win && g up'
+alias edithk='code ~/Documents/hotkeys.ahk'
+alias editcal='code ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini'
+alias winup='win && g up'
