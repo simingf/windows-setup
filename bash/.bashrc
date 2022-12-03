@@ -46,6 +46,13 @@ cd() {
     fi;
 }
 
+#directory aliases
+alias ..='cd ..'
+alias doc='builtin cd ~/Documents/'
+alias dow='builtin cd ~/Downloads/'
+alias desk='builtin cd ~/Desktop/'
+alias brown='cd ~/Documents/00Siming/Brown/'
+
 #git alias
 g() {
     if [[ "$@" == "" ]]; then
@@ -84,13 +91,6 @@ alias mvnp='mvn package'
 alias mvnsa='mvn spotless:apply'
 alias mvns='mvn site -Dmaven.javadoc.skip=true'
 
-#directory aliases
-alias ..='cd ..'
-alias doc='clear && builtin cd ~/Documents/'
-alias dow='clear && builtin cd ~/Downloads/'
-alias desk='clear && builtin cd ~/Desktop/'
-alias brown='clear && cd ~/Documents/00Siming/Brown/'
-
 #competitive programming
 alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
 cf() { #input: page number
@@ -100,14 +100,40 @@ cf() { #input: page number
 
 #browser
 cs() { #input: course id
-    start firefox https://cs.brown.edu/courses/csci$1/
+    if [[ "$1" == "" ]]; then
+        start firefox https://bulletin.brown.edu/the-college/concentrations/comp/
+    else
+        start firefox https://cs.brown.edu/courses/csci$1/
+    fi
+    exit
+}
+r() {
+    if [[ "$1" == "" ]]; then
+        start firefox https://www.reddit.com/ 
+    else
+        start firefox https://www.reddit.com/r/$1/ 
+    fi
+    exit
+}
+yt() {
+    if [[ "$1" == "" ]]; then
+        start firefox https://www.youtube.com/
+    elif [[ "$1" == "lofi" ]]; then
+        start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk/
+    elif [[ "$1" == "toast" ]]; then
+        start firefox https://www.youtube.com/@DisguisedToast/videos/
+    else
+        start firefox https://www.youtube.com/@$1/videos/
+    fi
+    exit
+}
+fmab() {
+    start firefox https://animixplay.to/v1/fullmetal-alchemist-brotherhood-dub/ep$1/
     exit
 }
 alias github='start firefox https://github.com/ && exit'
-alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
 alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
-alias toast='start firefox https://www.youtube.com/c/DisguisedToast/videos?view=0&sort=dd&flow=grid && exit'
 
 #windows-setup
 wincp() {
