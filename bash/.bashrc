@@ -25,7 +25,7 @@ alias e='exit'
 alias c='clear'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
 alias rm='rm -rv'                            #rm removes folders
-alias open='start . && exit'                 #open folder in file explorer
+alias open='start .'                 #open folder in file explorer
 alias left='ls -t -1'                        #list by modification time (where I 'left' off)
 alias size='du -hs'                          #size of current directory
 alias sizes='du -h --max-depth=1 | sort -h'  #size of all contained directories
@@ -131,6 +131,7 @@ fmab() {
     start firefox https://animixplay.to/v1/fullmetal-alchemist-brotherhood-dub/ep$1/
     exit
 }
+alias gs='start firefox https://www.gradescope.com/ && exit'
 alias github='start firefox https://github.com/ && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
 alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
