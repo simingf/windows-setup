@@ -37,9 +37,15 @@ return
 
 !j::
 IfWinExist ahk_class mintty
-	winactivate ahk_class mintty
+{
+	WinGet, WinList, List, ahk_class mintty
+	Loop, % WinList
+		winactivate, % "ahk_id " WinList%A_Index%
+}
 else
+{
 	run, "C:\Program Files\Git\git-bash.exe"
+}
 return
 
 !+j::
