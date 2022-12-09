@@ -62,6 +62,14 @@ g() {
         git add --all
         git commit -a -m "$@"
         git push
+    elif [[ "$1" == "commit" ]]; then
+        shift #remove first argument
+        git commit -m "$@"
+    elif [[ "$@" == ".gitignore" ]]; then
+        git rm -r --cached .
+        git add .
+        git commit -m "fix: .gitignore"
+        git push
     elif [[ "$@" == "diff" ]]; then
         git diff --name-status
     elif [[ "$@" == "branch" ]]; then
