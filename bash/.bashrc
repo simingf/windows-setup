@@ -22,7 +22,6 @@ bind "set completion-ignore-case on"
 
 #general aliases
 alias e='exit'
-alias c='clear'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
 alias rm='rm -rv'                            #rm removes folders
 alias open='start .'                 #open folder in file explorer
@@ -76,6 +75,21 @@ g() {
         git branch -vv
     else
         git "$@"
+    fi
+}
+
+#conda alias
+c() {
+    if [[ "$@" == "" ]]; then
+        clear
+    elif [[ "$1" == "a" ]]; then
+        shift #remove first argument
+        conda activate "$@"
+    elif [[ "$1" == "d" ]]; then
+        shift
+        conda deactivate
+    else
+        conda "$@"
     fi
 }
 
@@ -140,7 +154,7 @@ fmab() {
     exit
 }
 alias gs='start firefox https://www.gradescope.com/ && exit'
-alias github='start firefox https://github.com/ && exit'
+alias gh='start firefox https://github.com/ && exit'
 alias monkey='start firefox https://monkeytype.com/ && exit'
 alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
 
