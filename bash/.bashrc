@@ -64,6 +64,9 @@ g() {
     elif [[ "$1" == "commit" ]]; then
         shift #remove first argument
         git commit -m "$@"
+    elif [[ "$1" == "clone" ]]; then
+        shift
+        git clone "$1" && builtin cd "$(basename "$1" .git)" #cd into cloned directory
     elif [[ "$@" == ".gitignore" ]]; then
         git rm -r --cached .
         git add .
