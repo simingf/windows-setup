@@ -91,6 +91,9 @@ c() {
     elif [[ "$1" == "d" ]]; then
         shift
         conda deactivate
+    elif [[ "$1" == "i" ]]; then
+        shift
+        conda install "$@"
     else
         conda "$@"
     fi
