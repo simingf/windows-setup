@@ -20,7 +20,7 @@ bind "set menu-complete-display-prefix on"
 # when on: case insensitive
 bind "set completion-ignore-case on"
 
-#general aliases
+# general aliases
 alias e='exit'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
 alias rm='rm -rv'                            #rm removes folders
@@ -45,14 +45,14 @@ cd() {
     fi;
 }
 
-#directory aliases
+# directory aliases
 alias ..='cd ..'
 alias doc='builtin cd ~/Documents/'
 alias dow='builtin cd ~/Downloads/'
 alias desk='builtin cd ~/Desktop/'
 alias brown='cd ~/Documents/00Siming/Brown/'
 
-#git alias
+# git alias
 g() {
     if [[ "$@" == "" ]]; then
         git status
@@ -81,7 +81,7 @@ g() {
     fi
 }
 
-#conda alias
+# conda alias
 c() {
     if [[ "$@" == "" ]]; then
         clear
@@ -96,6 +96,15 @@ c() {
         conda install "$@"
     else
         conda "$@"
+    fi
+}
+
+# python alias
+p() {
+    if [[ "$@" == "" ]]; then
+        echo "python: no file given"
+    else
+        python "$@"
     fi
 }
 
