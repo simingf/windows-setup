@@ -82,6 +82,8 @@ g() {
 }
 
 # conda alias
+. /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
+
 c() {
     if [[ "$@" == "" ]]; then
         clear
@@ -114,14 +116,8 @@ alias vsc='code . && exit'
 #python alias
 alias pytest='doc && builtin cd pytest && vsc'
 
-#CS33 aliases
-alias 33='doc && cd CS33'
-alias v='vagrant'
-alias vboxmanage='"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"'
-
-#DL aliases
-alias dl='doc && cd DL'
-. /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
+#security alias
+alias dev='cd ~/dev/home'
 
 #32TA aliases
 alias mvnp='mvn package'
@@ -129,7 +125,7 @@ alias mvnsa='mvn spotless:apply'
 alias mvns='mvn site -Dmaven.javadoc.skip=true'
 
 #competitive programming
-alias cpp='code ~/Documents/Windows-Setup/C++\ CP/c++.code-workspace'
+alias cpp='code ~/Documents/competitive-programming/c++.code-workspace'
 cf() { #input: page number
     start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
     exit
