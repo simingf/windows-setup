@@ -30,6 +30,25 @@ return
 run, "C:\Program Files\Git\git-bash.exe"
 return
 
+;POWERSHELL
+
+!h::
+IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+{
+	WinGet, WinList, List, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+	Loop, % WinList
+		winactivate, % "ahk_id " WinList%A_Index%
+}
+else
+{
+	run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.2.0_x64__8wekyb3d8bbwe\pwsh.exe"
+}
+return
+
+!+h::
+run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.2.0_x64__8wekyb3d8bbwe\pwsh.exe"
+return
+
 ;VS CODE
 
 !k::
