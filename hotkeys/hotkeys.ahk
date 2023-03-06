@@ -127,6 +127,13 @@ return
 
 ;SINGLE INSTANCE APPS
 
+!c::
+IfWinExist ahk_class Chrome_WidgetWin_1
+	winactivate ahk_class Chrome_WidgetWin_1
+else
+	run, "Bing-AI"
+return
+
 !w::
 IfWinExist ahk_class WeChatMainWndForPC
 	winactivate ahk_class WeChatMainWndForPC
