@@ -161,7 +161,7 @@ yt() {
     exit
 }
 fmab() {
-    start firefox https://animixplay.to/v1/fullmetal-alchemist-brotherhood-dub/ep$1/
+    start firefox https://9anime.to/watch/fullmetal-alchemist-brotherhood.0r7/ep-$1
     exit
 }
 alias gs='start firefox https://www.gradescope.com/ && exit'
