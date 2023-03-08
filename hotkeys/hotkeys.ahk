@@ -41,7 +41,7 @@ IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 }
 else
 {
-	run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.2.0_x64__8wekyb3d8bbwe\pwsh.exe"
+	run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.3.0_x64__8wekyb3d8bbwe\pwsh.exe"
 }
 return
 
@@ -128,10 +128,7 @@ return
 ;SINGLE INSTANCE APPS
 
 !c::
-IfWinExist ahk_class Chrome_WidgetWin_1
-	winactivate ahk_class Chrome_WidgetWin_1
-else
-	run, "Bing-AI"
+run, "Bing-AI"
 return
 
 !w::
