@@ -30,7 +30,7 @@ return
 run, "C:\Program Files\Git\git-bash.exe"
 return
 
-;POWERSHELL
+;WSL ;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.3.0_x64__8wekyb3d8bbwe\pwsh.exe
 
 !h::
 IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
@@ -41,12 +41,12 @@ IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 }
 else
 {
-	run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.3.0_x64__8wekyb3d8bbwe\pwsh.exe"
+	run, "wsl-dev"
 }
 return
 
 !+h::
-run, "C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.2.0_x64__8wekyb3d8bbwe\pwsh.exe"
+run, "wsl-dev"
 return
 
 ;VS CODE
@@ -127,7 +127,7 @@ return
 
 ;SINGLE INSTANCE APPS
 
-!c::
+!x::
 run, "Bing-AI"
 return
 
