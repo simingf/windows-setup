@@ -160,14 +160,10 @@ yt() {
     fi
     exit
 }
-fmab() {
-    start firefox https://9anime.to/watch/fullmetal-alchemist-brotherhood.0r7/ep-$1
-    exit
-}
 alias gs='start firefox https://www.gradescope.com/ && exit'
 alias gh='start firefox https://github.com/ && exit'
-alias monkey='start firefox https://monkeytype.com/ && exit'
-alias wordle='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
+alias monk='start firefox https://monkeytype.com/ && exit'
+alias word='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
 
 #windows-setup
 wincp() {
