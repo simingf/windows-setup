@@ -45,6 +45,18 @@ cd() {
     fi;
 }
 
+colors() {
+    echo -e "\033[0mNC (No color)"
+    echo -e "\033[1;37mWHITE\t\033[0;30mBLACK"
+    echo -e "\033[0;34mBLUE\t\033[1;34mLIGHT_BLUE"
+    echo -e "\033[0;32mGREEN\t\033[1;32mLIGHT_GREEN"
+    echo -e "\033[0;36mCYAN\t\033[1;36mLIGHT_CYAN"
+    echo -e "\033[0;31mRED\t\033[1;31mLIGHT_RED"
+    echo -e "\033[0;35mPURPLE\t\033[1;35mLIGHT_PURPLE"
+    echo -e "\033[0;33mYELLOW\t\033[1;33mLIGHT_YELLOW"
+    echo -e "\033[1;30mGRAY\t\033[0;37mLIGHT_GRAY"
+}
+
 # directory aliases
 alias ..='cd ..'
 alias doc='builtin cd ~/Documents/'
@@ -124,6 +136,25 @@ alias mvnp='mvn package'
 alias mvnsa='mvn spotless:apply'
 alias mvns='mvn site -Dmaven.javadoc.skip=true'
 
+#search notes
+n() {
+    if [[ "$@" == "" ]]; then
+        ls /c/Users/Simin/Documents/00Siming/Notes/
+    else
+        IFS=$'\n'
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
+        for VAR in $FILES
+        do
+            NAME=${VAR##*/}
+            NAME=${NAME%".txt"}
+            echo -e '\033[1;33m=='$NAME'==\033[0m'
+            cat $VAR
+            echo ''
+        done
+        unset IFS
+    fi
+}
+
 #competitive programming
 alias cpp='code ~/Documents/competitive-programming/c++.code-workspace'
 cf() { #input: page number
@@ -148,25 +179,15 @@ r() {
     fi
     exit
 }
-yt() {
-    if [[ "$1" == "" ]]; then
-        start firefox https://www.youtube.com/
-    elif [[ "$1" == "lofi" ]]; then
-        start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk/
-    elif [[ "$1" == "toast" ]]; then
-        start firefox https://www.youtube.com/@DisguisedToast/videos/
-    else
-        start firefox https://www.youtube.com/@$1/videos/
-    fi
-    exit
-}
+alias yt='start firefox https://www.youtube.com/ && exit'
 alias gs='start firefox https://www.gradescope.com/ && exit'
 alias gh='start firefox https://github.com/ && exit'
+alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk/ && exit'
 alias monk='start firefox https://monkeytype.com/ && exit'
 alias word='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
 
 #windows-setup
-wincp() {
+wincp() { #helper function to copy files
     cp ~/.bashrc ~/Documents/Windows-Setup/bash/
     cp ~/.minttyrc ~/Documents/Windows-Setup/bash/
     cp ~/Documents/hotkeys.ahk ~/Documents/Windows-Setup/hotkeys/
@@ -174,7 +195,6 @@ wincp() {
     echo "setup files copied!"
 }
 alias win='cd ~/Documents/Windows-Setup/ && wincp'
-alias editmd='code ~/Documents/Windows-Setup/README.md'
 alias editrc='code ~/.bashrc'
 alias editmint='code ~/.minttyrc'
 alias edithk='code ~/Documents/hotkeys.ahk'
