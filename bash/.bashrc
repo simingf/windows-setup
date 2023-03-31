@@ -36,11 +36,12 @@ alias count='find . -type f | wc -l'         #counts number of files in director
 alias restart='c && builtin cd && source .bashrc && doc'
 
 cd() {
-    DIR="$*";
     # if no DIR given, go home
-    if [ $# -lt 1 ]; then
+    if [[ "$@" == "" ]]; then
         builtin cd $HOME;
     else
+        DIRS=$(find . -maxdepth 1 -iname "*$@*" -print -quit)
+        DIR=${DIRS%%*"\n"}
         builtin cd "${DIR}" && ls;
     fi;
 }
@@ -58,11 +59,11 @@ colors() {
 }
 
 # directory aliases
-alias ..='cd ..'
+alias ..='builtin cd ..'
 alias doc='builtin cd ~/Documents/'
 alias dow='builtin cd ~/Downloads/'
 alias desk='builtin cd ~/Desktop/'
-alias brown='cd ~/Documents/00Siming/Brown/'
+alias brown='builtin cd ~/Documents/00Siming/Brown/'
 
 # git alias
 g() {
@@ -103,7 +104,6 @@ c() {
         shift #remove first argument
         conda activate "$@"
     elif [[ "$1" == "d" ]]; then
-        shift
         conda deactivate
     elif [[ "$1" == "i" ]]; then
         shift
@@ -129,10 +129,10 @@ alias vsc='code . && exit'
 alias pytest='doc && builtin cd pytest && vsc'
 
 #ml alias
-alias ml='doc && cd ml && conda activate ml'
+alias ml='doc && builtin cd ml && conda activate ml'
 
 #security alias
-alias dev='cd ~/dev/home'
+alias dev='builtin cd ~/dev/home'
 
 #32TA aliases
 alias mvnp='mvn package'
@@ -215,7 +215,7 @@ wincp() { #helper function to copy files
     cp ~/Documents/Rainmeter/Skins/Ultracalendar/Ultra\ calendar.ini ~/Documents/Windows-Setup/Rainmeter
     echo "setup files copied!"
 }
-alias win='cd ~/Documents/Windows-Setup/ && wincp'
+alias win='builtin cd ~/Documents/Windows-Setup/ && wincp'
 alias editrc='code ~/.bashrc'
 alias editmint='code ~/.minttyrc'
 alias edithk='code ~/Documents/hotkeys.ahk'
