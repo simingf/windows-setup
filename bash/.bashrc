@@ -140,6 +140,22 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 n() {
     if [[ "$@" == "" ]]; then
         ls /c/Users/Simin/Documents/00Siming/Notes/
+    elif [[ "$1" == "edit" ]]; then
+        shift
+        IFS=$'\n'
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
+        for VAR in $FILES
+        do
+            notepad $VAR
+        done
+        unset IFS
+    elif [[ "$1" == "new" ]]; then
+        shift
+        touch /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
+        notepad /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
+    elif [[ "$1" == "rm" ]]; then
+        shift
+        rm -f /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
     else
         IFS=$'\n'
         FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
