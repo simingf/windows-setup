@@ -143,7 +143,7 @@ n() {
     elif [[ "$1" == "edit" ]]; then
         shift
         IFS=$'\n'
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
         for VAR in $FILES
         do
             notepad $VAR
@@ -160,7 +160,7 @@ n() {
         rm -f "$FILE"
     else
         IFS=$'\n'
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
         for VAR in $FILES
         do
             NAME=${VAR##*/}
