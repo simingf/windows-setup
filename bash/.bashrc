@@ -128,6 +128,9 @@ alias vsc='code . && exit'
 #python alias
 alias pytest='doc && builtin cd pytest && vsc'
 
+#ml alias
+alias ml='doc && cd ml && conda activate ml'
+
 #security alias
 alias dev='cd ~/dev/home'
 
