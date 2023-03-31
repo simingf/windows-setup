@@ -151,11 +151,13 @@ n() {
         unset IFS
     elif [[ "$1" == "new" ]]; then
         shift
-        touch /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
-        notepad /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
+        FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
+        touch "$FILE"
+        notepad "$FILE"
     elif [[ "$1" == "rm" ]]; then
         shift
-        rm -f /c/Users/Simin/Documents/00Siming/Notes/"$@".txt
+        FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
+        rm -f "$FILE"
     else
         IFS=$'\n'
         FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$*"*.txt)
