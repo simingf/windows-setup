@@ -38,12 +38,14 @@ alias restart='c && builtin cd && source .bashrc && doc'
 cd() {
     # if no DIR given, go home
     if [[ "$@" == "" ]]; then
-        builtin cd $HOME;
+        builtin cd $HOME
+    elif [[ "$@" == *"/"* ]]; then
+        builtin cd "$@" && ls
     else
         DIRS=$(find . -maxdepth 1 -iname "*$@*" -print -quit)
         DIR=${DIRS%%*"\n"}
-        builtin cd "${DIR}" && ls;
-    fi;
+        builtin cd "${DIR}" && ls
+    fi
 }
 
 colors() {
