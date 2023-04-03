@@ -39,12 +39,29 @@ cd() {
     # if no DIR given, go home
     if [[ "$@" == "" ]]; then
         builtin cd $HOME
+    # if .., go back
+    elif [[ "$@" == ".." ]]; then
+        builtin cd ..
+    # if contains /, I tabbed it so go directly
     elif [[ "$@" == *"/"* ]]; then
         builtin cd "$@" && ls
     else
-        DIRS=$(find . -maxdepth 1 -iname "*$@*" -print -quit)
-        DIR=${DIRS%%*"\n"}
-        builtin cd "${DIR}" && ls
+        # find exact match
+        EXACT=$(find . -maxdepth 1 -type d -iname "$@" -print -quit)
+        if [[ $EXACT != "" ]]; then
+            builtin cd "${EXACT}" && ls
+        else
+            # find all dirs that contain string
+            DIRS=$(find . -maxdepth 1 -type d -iname "*$@*" -print -quit)
+            if [[ $DIRS == "" ]]; then
+                echo "no match found" 
+            else
+                # cd to first match
+                DIR=${DIRS%%*"\n"}
+                echo "match found: $DIR"
+                builtin cd "${DIR}" && ls
+            fi
+        fi
     fi
 }
 
@@ -134,7 +151,7 @@ alias pytest='doc && builtin cd pytest && vsc'
 alias ml='doc && builtin cd ml && conda activate ml'
 
 #security alias
-alias dev='builtin cd ~/dev/home'
+alias dev='builtin cd ~/dev/home && ls'
 
 #32TA aliases
 alias mvnp='mvn package'
