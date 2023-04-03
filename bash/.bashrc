@@ -145,20 +145,20 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 n() {
     if [[ "$@" == "" ]]; then
         ls /c/Users/Simin/Documents/00Siming/Notes/
-    elif [[ "$1" == "edit" ]]; then
+    elif [[ "$1" == "e" ]]; then
         shift
         IFS=$'\n'
         FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
-        for VAR in $FILES
+        for FILE in $FILES
         do
-            notepad $VAR
+            code $FILE
         done
         unset IFS
-    elif [[ "$1" == "new" ]]; then
+    elif [[ "$1" == "n" ]]; then
         shift
         FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
         touch "$FILE"
-        notepad "$FILE"
+        code "$FILE"
     elif [[ "$1" == "rm" ]]; then
         shift
         FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
@@ -166,12 +166,12 @@ n() {
     else
         IFS=$'\n'
         FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
-        for VAR in $FILES
+        for FILE in $FILES
         do
-            NAME=${VAR##*/}
+            NAME=${FILE##*/}
             NAME=${NAME%".txt"}
             echo -e '\033[1;33m=='$NAME'==\033[0m'
-            cat $VAR
+            cat $FILE
             echo ''
         done
         unset IFS
