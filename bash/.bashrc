@@ -165,7 +165,8 @@ n() {
     elif [[ "$1" == "e" ]]; then
         shift
         IFS=$'\n'
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
+        INPUT="$@"
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$INPUT"*.txt)
         for FILE in $FILES
         do
             code $FILE
@@ -173,16 +174,19 @@ n() {
         unset IFS
     elif [[ "$1" == "n" ]]; then
         shift
-        FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
+        INPUT="$@"
+        FILE=/c/Users/Simin/Documents/00Siming/Notes/"$INPUT".txt
         touch "$FILE"
         code "$FILE"
     elif [[ "$1" == "rm" ]]; then
         shift
-        FILE=/c/Users/Simin/Documents/00Siming/Notes/$@.txt
+        INPUT="$@"
+        FILE=/c/Users/Simin/Documents/00Siming/Notes/"$INPUT".txt
         rm -f "$FILE"
     else
         IFS=$'\n'
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$@"*.txt)
+        INPUT="$@"
+        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$INPUT"*.txt)
         for FILE in $FILES
         do
             NAME=${FILE##*/}
