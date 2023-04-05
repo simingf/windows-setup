@@ -58,7 +58,8 @@ cd() {
             else
                 # cd to first match
                 DIR=${DIRS%%*"\n"}
-                echo "match found: $DIR"
+                echo "found $DIR"
+                echo
                 builtin cd "${DIR}" && ls
             fi
         fi
@@ -82,7 +83,7 @@ alias ..='builtin cd ..'
 alias doc='builtin cd ~/Documents/'
 alias dow='builtin cd ~/Downloads/'
 alias desk='builtin cd ~/Desktop/'
-alias brown='builtin cd ~/Documents/00Siming/Brown/'
+alias brown='builtin cd ~/Documents/00Siming/Brown/ && ls'
 
 # git alias
 g() {
@@ -142,7 +143,7 @@ p() {
 }
 
 #vscode
-alias vsc='code . && exit'
+alias vs='code . && exit'
 
 #python alias
 alias pytest='doc && builtin cd pytest && vsc'
@@ -223,9 +224,9 @@ r() {
     fi
     exit
 }
-alias yt='start firefox https://www.youtube.com/ && exit'
 alias gs='start firefox https://www.gradescope.com/ && exit'
 alias gh='start firefox https://github.com/ && exit'
+alias yt='start firefox https://www.youtube.com/ && exit'
 alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk/ && exit'
 alias monk='start firefox https://monkeytype.com/ && exit'
 alias word='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
