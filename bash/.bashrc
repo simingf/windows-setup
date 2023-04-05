@@ -113,6 +113,7 @@ g() {
         git "$@"
     fi
 }
+alias gup='g up'
 
 # conda alias
 . /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
