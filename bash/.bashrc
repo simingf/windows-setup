@@ -24,7 +24,7 @@ bind "set completion-ignore-case on"
 alias e='exit'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
 alias rm='rm -rv'                            #rm removes folders
-alias open='start .'                 #open folder in file explorer
+alias open='start .'                         #open folder in file explorer
 alias left='ls -t -1'                        #list by modification time (where I 'left' off)
 alias size='du -hs'                          #size of current directory
 alias sizes='du -h --max-depth=1 | sort -h'  #size of all contained directories
@@ -164,15 +164,21 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 n() {
     if [[ "$@" == "" ]]; then
         ls /c/Users/Simin/Documents/00Siming/Notes/
+    elif [[ "$@" == "go" ]]; then
+        builtin cd /c/Users/Simin/Documents/00Siming/Notes/ && ls
     elif [[ "$1" == "e" ]]; then
         shift
         IFS=$'\n'
         INPUT="$@"
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$INPUT"*.txt)
-        for FILE in $FILES
-        do
-            code $FILE
-        done
+        FILES=$(find /c/Users/Simin/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
+        if [[ $FILES == "" ]]; then
+            echo "no notes found for '$INPUT'"
+        else
+            for FILE in $FILES
+            do
+                code $FILE
+            done
+        fi
         unset IFS
     elif [[ "$1" == "n" ]]; then
         shift
@@ -188,15 +194,43 @@ n() {
     else
         IFS=$'\n'
         INPUT="$@"
-        FILES=$(grep -l "" /c/Users/Simin/Documents/00Siming/Notes/*"$INPUT"*.txt)
-        for FILE in $FILES
-        do
-            NAME=${FILE##*/}
-            NAME=${NAME%".txt"}
-            echo -e '\033[1;33m=='$NAME'==\033[0m'
-            cat $FILE
-            echo ''
-        done
+        FILES=$(find /c/Users/Simin/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
+        if [[ $FILES == "" ]]; then
+            echo "no notes found for '$INPUT'"
+        else
+            for FILE in $FILES
+            do
+                NAME=${FILE##*/}
+                NAME=${NAME%".txt"}
+                echo -e '\033[1;33m=='$NAME'==\033[0m'
+                cat $FILE
+                echo ''
+            done
+        fi
+        unset IFS
+    fi
+}
+
+#search files
+f() {
+    if [[ "$@" == "" ]]; then
+        ls /c/Users/Simin/Documents/00Siming/Files/
+    elif [[ "$@" == "go" ]]; then
+        builtin cd /c/Users/Simin/Documents/00Siming/Files/ && ls
+    else
+        IFS=$'\n'
+        INPUT="$@"
+        FILES=$(find /c/Users/Simin/Documents/00Siming/Files/ -type f -iname "*$INPUT*" -print)
+        if [[ $FILES == "" ]]; then
+            echo "no files found for '$INPUT'"
+        else
+            for FILE in $FILES
+            do
+                FILE=${FILE#/}
+                FILE=${FILE#*/}
+                start firefox file:///C:/"$FILE"
+            done
+        fi
         unset IFS
     fi
 }
