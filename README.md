@@ -72,7 +72,7 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 # Coding:
 
 -C++ (MinGW, https://www.freecodecamp.org/news/how-to-compile-your-c-code-in-visual-studio-code/) \
--Python \
+-MiniConda (Python) \
 -Jupyter Lab \
 -Java Development Kit \
 -Node.js \

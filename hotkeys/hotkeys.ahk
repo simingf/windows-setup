@@ -127,15 +127,11 @@ return
 
 ;SINGLE INSTANCE APPS
 
-!x::
-run, "Bing-AI"
-return
-
 !w::
 IfWinExist ahk_class WeChatMainWndForPC
 	winactivate ahk_class WeChatMainWndForPC
 else
-	run, wechat
+	run, "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
 return
 
 !t::
@@ -149,7 +145,7 @@ return
 IfWinExist ahk_class Chrome_WidgetWin_0
 	winactivate ahk_class Chrome_WidgetWin_0
 else
-	run, "C:\Users\Simin\AppData\Roaming\Spotify\Spotify.exe"
+	run, "C:\Users\Sim\AppData\Roaming\Spotify\Spotify.exe"
 return
 
 ;HELPER FUNCTIONS

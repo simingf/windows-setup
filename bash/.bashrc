@@ -116,7 +116,7 @@ g() {
 alias gup='g up'
 
 # conda alias
-. /c/Users/Simin/miniconda3/etc/profile.d/conda.sh
+. /c/Users/Sim/miniconda3/etc/profile.d/conda.sh
 
 c() {
     if [[ "$@" == "" ]]; then
@@ -126,9 +126,6 @@ c() {
         conda activate "$@"
     elif [[ "$1" == "d" ]]; then
         conda deactivate
-    elif [[ "$1" == "i" ]]; then
-        shift
-        conda install "$@"
     else
         conda "$@"
     fi
@@ -147,7 +144,7 @@ p() {
 alias vs='code . && exit'
 
 #python alias
-alias pytest='doc && builtin cd pytest && vsc'
+alias pytest='doc && builtin cd pytest && vs'
 
 #ml alias
 alias ml='doc && builtin cd ml && conda activate ml'
