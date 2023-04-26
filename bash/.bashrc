@@ -160,14 +160,14 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 #search notes
 n() {
     if [[ "$@" == "" ]]; then
-        ls /c/Users/Simin/Documents/00Siming/Notes/
+        ls /c/Users/Sim/Documents/00Siming/Notes/
     elif [[ "$@" == "go" ]]; then
-        builtin cd /c/Users/Simin/Documents/00Siming/Notes/ && ls
+        builtin cd /c/Users/Sim/Documents/00Siming/Notes/ && ls
     elif [[ "$1" == "e" ]]; then
         shift
         IFS=$'\n'
         INPUT="$@"
-        FILES=$(find /c/Users/Simin/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
+        FILES=$(find /c/Users/Sim/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
         if [[ $FILES == "" ]]; then
             echo "no notes found for '$INPUT'"
         else
@@ -180,18 +180,18 @@ n() {
     elif [[ "$1" == "n" ]]; then
         shift
         INPUT="$@"
-        FILE=/c/Users/Simin/Documents/00Siming/Notes/"$INPUT".txt
+        FILE=/c/Users/Sim/Documents/00Siming/Notes/"$INPUT".txt
         touch "$FILE"
         code "$FILE"
     elif [[ "$1" == "rm" ]]; then
         shift
         INPUT="$@"
-        FILE=/c/Users/Simin/Documents/00Siming/Notes/"$INPUT".txt
+        FILE=/c/Users/Sim/Documents/00Siming/Notes/"$INPUT".txt
         rm -f "$FILE"
     else
         IFS=$'\n'
         INPUT="$@"
-        FILES=$(find /c/Users/Simin/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
+        FILES=$(find /c/Users/Sim/Documents/00Siming/Notes/ -type f -iname "*$INPUT*" -print)
         if [[ $FILES == "" ]]; then
             echo "no notes found for '$INPUT'"
         else
@@ -211,13 +211,13 @@ n() {
 #search files
 f() {
     if [[ "$@" == "" ]]; then
-        ls /c/Users/Simin/Documents/00Siming/Files/
+        ls /c/Users/Sim/Documents/00Siming/Files/
     elif [[ "$@" == "go" ]]; then
-        builtin cd /c/Users/Simin/Documents/00Siming/Files/ && ls
+        builtin cd /c/Users/Sim/Documents/00Siming/Files/ && ls
     else
         IFS=$'\n'
         INPUT="$@"
-        FILES=$(find /c/Users/Simin/Documents/00Siming/Files/ -type f -iname "*$INPUT*" -print)
+        FILES=$(find /c/Users/Sim/Documents/00Siming/Files/ -type f -iname "*$INPUT*" -print)
         if [[ $FILES == "" ]]; then
             echo "no files found for '$INPUT'"
         else
