@@ -81,4 +81,4 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -React \
 -Orange \
 -WSL \
--Docker \
+-Docker 

@@ -41,12 +41,12 @@ IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 }
 else
 {
-	run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+	run, wsl-security
 }
 return
 
 !+h::
-run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+run, wsl-security
 return
 
 ;VS CODE
