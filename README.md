@@ -8,20 +8,22 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 -Nvidia Geforce Experience \
 -Dell S2721DGF Monitor Driver \
 -Intel Driver & Support Assistant \
--Logitech G Hub
+-Logitech G Hub \
+-Crowd Strike Home (Brown)
 
 # Windows Programs:
 
 -Firefox \
 -VSCode \
--Git & Git Bash \
+-Git Bash \
 -TortoiseGit \
--Wechat \
--Discord & BetterDiscord \
+-Wechat (MS Store) \
+-Discord \
 -Zoom \
+-Spotify \
 -VLC \
 -Express VPN \
--Revo Uninstaller \
+-QBittorrent \
 -Microsoft Todo (MS Store) \
 -Microsoft Office (Brown) \
 -Microsoft OneDrive
@@ -73,9 +75,10 @@ Instructions for setting up Windows desktop. Clone this repository into Document
 
 -C++ (MinGW, https://www.freecodecamp.org/news/how-to-compile-your-c-code-in-visual-studio-code/) \
 -MiniConda (Python) \
--Jupyter Lab \
 -Java Development Kit \
 -Node.js \
 -Typescript \
 -React \
--Orange
+-Orange \
+-WSL \
+-Docker \
