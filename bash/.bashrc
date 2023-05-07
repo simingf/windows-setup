@@ -83,6 +83,7 @@ alias ..='builtin cd ..'
 alias doc='builtin cd ~/Documents/'
 alias dow='builtin cd ~/Downloads/'
 alias desk='builtin cd ~/Desktop/'
+alias scr='builtin cd ~/Pictures/Screenshots/ && start . && exit'
 alias brown='builtin cd ~/Documents/00Siming/Brown/ && ls'
 
 # git alias
@@ -253,6 +254,14 @@ r() {
         start firefox https://www.reddit.com/ 
     else
         start firefox https://www.reddit.com/r/$1/ 
+    fi
+    exit
+}
+np() {
+    if [[ "$1" == "" ]]; then
+        start firefox https://numpy.org/doc/stable/reference/routines.array-manipulation.html
+    else
+        start firefox https://numpy.org/doc/stable/reference/generated/numpy.$1.html
     fi
     exit
 }
