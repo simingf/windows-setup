@@ -60,12 +60,12 @@ IfWinExist ahk_class Chrome_WidgetWin_1
 }
 else
 {
-	run, "C:\Users\Simin\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+	run, "C:\Users\Sim\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 }
 return
 
 !+k::
-run, "C:\Users\Simin\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+run, "C:\Users\Sim\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 return
 
 ;FIREFOX
