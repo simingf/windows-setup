@@ -134,6 +134,13 @@ else
 	run, "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
 return
 
+!d::
+IfWinExist ahk_exe Discord.exe
+	winactivate ahk_exe Discord.exe
+else
+	run, "C:\Users\Sim\AppData\Local\Discord\app-1.0.9013\Discord.exe"
+return
+
 !t::
 IfWinExist ahk_exe ApplicationFrameHost.exe
 	winactivate ahk_exe ApplicationFrameHost.exe
@@ -146,4 +153,11 @@ IfWinExist ahk_exe Spotify.exe
 	winactivate ahk_exe Spotify.exe
 else
 	run, "C:\Users\Sim\AppData\Roaming\Spotify\Spotify.exe"
+return
+
+!v::
+IfWinExist ahk_exe OKZTWO.exe
+	winactivate ahk_exe OKZTWO.exe
+else
+	run, "C:\Program Files\OKZTWO\OKZTWO.exe"
 return
