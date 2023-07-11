@@ -1,10 +1,10 @@
+echo "-Welcome, Siming-"
+
 parse_git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 PS1="\[\033[1;36m\](\W)\[\033[1;35m\]\$(parse_git_branch)\[\033[0;33m\]|> \[\e[00m\]" #show current directory before command
-
-echo "-Welcome, Siming-"
 
 # mapping to have up and down arrows search commands in history that match currently typed
 bind '"\e[A":history-search-backward'
@@ -14,7 +14,7 @@ bind '"\e[B":history-search-forward'
 bind '"\t": menu-complete'
 bind '"\e[Z": menu-complete-backward'
 # when on: first tab lists all choices
-bind "set show-all-if-ambiguous off"
+bind "set show-all-if-ambiguous on"
 # when on: first tab fills up to difference instead of selecting first option
 bind "set menu-complete-display-prefix on" 
 # when on: case insensitive
@@ -23,7 +23,7 @@ bind "set completion-ignore-case on"
 # general aliases
 alias e='exit'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
-alias rm='rm -rv'                            #rm removes folders
+alias rm='rm -r'                             #rm removes folders
 alias open='start .'                         #open folder in file explorer
 alias left='ls -t -1'                        #list by modification time (where I 'left' off)
 alias size='du -hs'                          #size of current directory
@@ -31,9 +31,14 @@ alias sizes='du -h --max-depth=1 | sort -h'  #size of all contained directories
 alias find.='ls | grep'                      #grep in current directory
 alias grep='grep --color=auto --ignore-case' #colorize grep
 alias hist='history | grep'                  #grep command history
-alias clrhist='history -c && history -w'     #clear command history
+alias clearhist='history -c && history -w'   #clear command history
 alias count='find . -type f | wc -l'         #counts number of files in directory
 alias restart='c && builtin cd && source .bashrc && doc'
+
+# automatically corrects typos in cd
+# shopt -s cdspell
+
+# eval $(thefuck --alias fuck)
 
 cd() {
     # if no DIR given, go home
@@ -58,8 +63,6 @@ cd() {
             else
                 # cd to first match
                 DIR=${DIRS%%*"\n"}
-                echo "found $DIR"
-                echo
                 builtin cd "${DIR}" && ls
             fi
         fi
@@ -162,8 +165,8 @@ alias mvns='mvn site -Dmaven.javadoc.skip=true'
 n() {
     if [[ "$@" == "" ]]; then
         ls /c/Users/Sim/Documents/00Siming/Notes/
-    elif [[ "$@" == "go" ]]; then
-        builtin cd /c/Users/Sim/Documents/00Siming/Notes/ && ls
+    elif [[ "$@" == "open" ]]; then
+        start /c/Users/Sim/Documents/00Siming/Notes/ && exit
     elif [[ "$1" == "e" ]]; then
         shift
         IFS=$'\n'
@@ -213,8 +216,8 @@ n() {
 f() {
     if [[ "$@" == "" ]]; then
         ls /c/Users/Sim/Documents/00Siming/Files/
-    elif [[ "$@" == "go" ]]; then
-        builtin cd /c/Users/Sim/Documents/00Siming/Files/ && ls
+    elif [[ "$@" == "open" ]]; then
+        start /c/Users/Sim/Documents/00Siming/Files/ && exit
     else
         IFS=$'\n'
         INPUT="$@"
