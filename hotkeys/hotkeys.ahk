@@ -14,9 +14,9 @@ return
 ;GIT BASH
 
 !j::
-IfWinExist ahk_class mintty
+IfWinExist ahk_exe mintty.exe
 {
-	WinGet, WinList, List, ahk_class mintty
+	WinGet, WinList, List, ahk_exe mintty.exe
 	Loop, % WinList
 		winactivate, % "ahk_id " WinList%A_Index%
 }
@@ -33,28 +33,28 @@ return
 ;WSL ;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.3.0_x64__8wekyb3d8bbwe\pwsh.exe
 
 !h::
-IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+IfWinExist ahk_exe WindowsTerminal.exe
 {
-	WinGet, WinList, List, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+	WinGet, WinList, List, ahk_exe WindowsTerminal.exe
 	Loop, % WinList
 		winactivate, % "ahk_id " WinList%A_Index%
 }
 else
 {
-	run, wsl-security
+	run, wsl
 }
 return
 
 !+h::
-run, wsl-security
+run, wsl
 return
 
 ;VS CODE
 
 !k::
-IfWinExist ahk_class Chrome_WidgetWin_1
+IfWinExist ahk_exe Code.exe
 {
-	WinGet, WinList, List, ahk_class Chrome_WidgetWin_1
+	WinGet, WinList, List, ahk_exe Code.exe
 	Loop, % WinList
 		winactivate, % "ahk_id " WinList%A_Index%
 }
@@ -71,9 +71,9 @@ return
 ;FIREFOX
 
 !f::
-IfWinExist ahk_class MozillaWindowClass
+IfWinExist ahk_exe firefox.exe
 {
-	WinGet, WinList, List, ahk_class MozillaWindowClass
+	WinGet, WinList, List, ahk_exe firefox.exe
 	Loop, % WinList
 		winactivate, % "ahk_id " WinList%A_Index%
 }
@@ -109,9 +109,9 @@ return
 ;NOTEPAD
 
 !n::
-IfWinExist ahk_class Notepad
+IfWinExist ahk_exe Notepad.exe
 {
-	WinGet, WinList, List, ahk_class Notepad
+	WinGet, WinList, List, ahk_exe Notepad.exe
 	Loop, % WinList
 		winactivate, % "ahk_id " WinList%A_Index%
 }
@@ -128,28 +128,22 @@ return
 ;SINGLE INSTANCE APPS
 
 !w::
-IfWinExist ahk_class WeChatMainWndForPC
-	winactivate ahk_class WeChatMainWndForPC
+IfWinExist ahk_exe WeChat.exe
+	winactivate ahk_exe WeChat.exe
 else
 	run, "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
 return
 
 !t::
-IfWinExist ahk_class ApplicationFrameWindow
-	winactivate ahk_class ApplicationFrameWindow
+IfWinExist ahk_exe ApplicationFrameHost.exe
+	winactivate ahk_exe ApplicationFrameHost.exe
 else
 	run, todo
 return
 
 !s::
-IfWinExist ahk_class Chrome_WidgetWin_0
-	winactivate ahk_class Chrome_WidgetWin_0
+IfWinExist ahk_exe Spotify.exe
+	winactivate ahk_exe Spotify.exe
 else
 	run, "C:\Users\Sim\AppData\Roaming\Spotify\Spotify.exe"
 return
-
-;HELPER FUNCTIONS
-
-!g::
-WinGetClass, class, A
-clipboard := class
