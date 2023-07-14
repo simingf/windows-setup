@@ -88,6 +88,8 @@ alias dow='builtin cd ~/Downloads/'
 alias desk='builtin cd ~/Desktop/'
 alias scr='builtin cd ~/Pictures/Screenshots/ && start . && exit'
 alias brown='builtin cd ~/Documents/00Siming/Brown/ && ls'
+alias boss='builtin cd ~/Desktop/just-ventures/boss-system/ && code . && npm start'
+alias kd='builtin cd ~/Desktop/knowdee/ && conda activate knowdee && ls && code .'
 
 # git alias
 g() {
