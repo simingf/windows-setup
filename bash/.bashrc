@@ -25,21 +25,18 @@ alias e='exit'
 alias mkdir='mkdir -pv'                      #makes parent folders and notifies all folders made
 alias rm='rm -r'                             #rm removes folders
 alias open='start .'                         #open folder in file explorer
-alias left='ls -t -1'                        #list by modification time (where I 'left' off)
-alias size='du -hs'                          #size of current directory
-alias sizes='du -h --max-depth=1 | sort -h'  #size of all contained directories
-alias find.='ls | grep'                      #grep in current directory
 alias grep='grep --color=auto --ignore-case' #colorize grep
 alias hist='history | grep'                  #grep command history
 alias clearhist='history -c && history -w'   #clear command history
-alias count='find . -type f | wc -l'         #counts number of files in directory
 alias restart='c && builtin cd && source .bashrc && doc'
 
-# automatically corrects typos in cd
-# shopt -s cdspell
+# directory aliases
+alias ..='builtin cd ..'
+alias doc='builtin cd ~/Documents/'
+alias dow='builtin cd ~/Downloads/'
+alias desk='builtin cd ~/Desktop/'
 
-# eval $(thefuck --alias fuck)
-
+# cd function
 cd() {
     # if no DIR given, go home
     if [[ "$@" == "" ]]; then
@@ -69,29 +66,7 @@ cd() {
     fi
 }
 
-colors() {
-    echo -e "\033[0mNC (No color)"
-    echo -e "\033[1;37mWHITE\t\033[0;30mBLACK"
-    echo -e "\033[0;34mBLUE\t\033[1;34mLIGHT_BLUE"
-    echo -e "\033[0;32mGREEN\t\033[1;32mLIGHT_GREEN"
-    echo -e "\033[0;36mCYAN\t\033[1;36mLIGHT_CYAN"
-    echo -e "\033[0;31mRED\t\033[1;31mLIGHT_RED"
-    echo -e "\033[0;35mPURPLE\t\033[1;35mLIGHT_PURPLE"
-    echo -e "\033[0;33mYELLOW\t\033[1;33mLIGHT_YELLOW"
-    echo -e "\033[1;30mGRAY\t\033[0;37mLIGHT_GRAY"
-}
-
-# directory aliases
-alias ..='builtin cd ..'
-alias doc='builtin cd ~/Documents/'
-alias dow='builtin cd ~/Downloads/'
-alias desk='builtin cd ~/Desktop/'
-alias scr='builtin cd ~/Pictures/Screenshots/ && start . && exit'
-alias brown='builtin cd ~/Documents/00Siming/Brown/ && ls'
-alias boss='builtin cd ~/Desktop/just-ventures/boss-system/ && code . && npm start'
-alias kd='builtin cd ~/Desktop/knowdee/ && conda activate knowdee && ls && code .'
-
-# git alias
+# git function
 g() {
     if [[ "$@" == "" ]]; then
         git status
@@ -121,7 +96,7 @@ g() {
 }
 alias gup='g up'
 
-# conda alias
+# conda function
 . /c/Users/Sim/miniconda3/etc/profile.d/conda.sh
 
 c() {
@@ -137,7 +112,7 @@ c() {
     fi
 }
 
-# python alias
+# python function
 p() {
     if [[ "$@" == "" ]]; then
         echo "python: no file given"
@@ -145,23 +120,6 @@ p() {
         python "$@"
     fi
 }
-
-#vscode
-alias vs='code . && exit'
-
-#python alias
-alias pytest='doc && builtin cd pytest && vs'
-
-#ml alias
-alias ml='doc && builtin cd ml && conda activate ml'
-
-#security alias
-alias dev='builtin cd ~/dev/home && ls'
-
-#32TA aliases
-alias mvnp='mvn package'
-alias mvnsa='mvn spotless:apply'
-alias mvns='mvn site -Dmaven.javadoc.skip=true'
 
 #search notes
 n() {
@@ -239,7 +197,6 @@ f() {
 }
 
 #competitive programming
-alias cpp='code ~/Documents/competitive-programming/c++.code-workspace'
 cf() { #input: page number
     start firefox https://codeforces.com/problemset/page/$1?order=BY_SOLVED_DESC
     exit
@@ -254,14 +211,6 @@ cs() { #input: course id
     fi
     exit
 }
-r() {
-    if [[ "$1" == "" ]]; then
-        start firefox https://www.reddit.com/ 
-    else
-        start firefox https://www.reddit.com/r/$1/ 
-    fi
-    exit
-}
 np() {
     if [[ "$1" == "" ]]; then
         start firefox https://numpy.org/doc/stable/reference/routines.array-manipulation.html
@@ -270,12 +219,6 @@ np() {
     fi
     exit
 }
-alias gs='start firefox https://www.gradescope.com/ && exit'
-alias gh='start firefox https://github.com/ && exit'
-alias yt='start firefox https://www.youtube.com/ && exit'
-alias lofi='start firefox https://www.youtube.com/watch?v=jfKfPfyJRdk/ && exit'
-alias monk='start firefox https://monkeytype.com/ && exit'
-alias word='start firefox https://www.nytimes.com/games/wordle/index.html && exit'
 
 #windows-setup
 wincp() { #helper function to copy files
