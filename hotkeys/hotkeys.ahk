@@ -13,7 +13,7 @@ return
 
 ;GIT BASH
 
-!j::
+!Enter::
 IfWinExist ahk_exe mintty.exe
 {
 	WinGet, WinList, List, ahk_exe mintty.exe
@@ -26,32 +26,13 @@ else
 }
 return
 
-!+j::
+!+Enter::
 run, "C:\Program Files\Git\git-bash.exe"
-return
-
-;WSL ;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.3.3.0_x64__8wekyb3d8bbwe\pwsh.exe
-
-!h::
-IfWinExist ahk_exe WindowsTerminal.exe
-{
-	WinGet, WinList, List, ahk_exe WindowsTerminal.exe
-	Loop, % WinList
-		winactivate, % "ahk_id " WinList%A_Index%
-}
-else
-{
-	run, wsl
-}
-return
-
-!+h::
-run, wsl
 return
 
 ;VS CODE
 
-!k::
+!v::
 IfWinExist ahk_exe Code.exe
 {
 	WinGet, WinList, List, ahk_exe Code.exe
@@ -60,12 +41,31 @@ IfWinExist ahk_exe Code.exe
 }
 else
 {
-	run, "C:\Users\Sim\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+	run, code
 }
 return
 
-!+k::
-run, "C:\Users\Sim\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+!+v::
+run, code
+return
+
+;QT CREATOR
+
+!q::
+IfWinExist ahk_exe qtcreator.exe
+{
+	WinGet, WinList, List, ahk_exe qtcreator.exe
+	Loop, % WinList
+		winactivate, % "ahk_id " WinList%A_Index%
+}
+else
+{
+	run, "C:\Qt\Tools\QtCreator\bin\qtcreator.exe"
+}
+return
+
+!+q::
+run, "C:\Qt\Tools\QtCreator\bin\qtcreator.exe"
 return
 
 ;FIREFOX
@@ -138,7 +138,7 @@ return
 IfWinExist ahk_exe Discord.exe
 	winactivate ahk_exe Discord.exe
 else
-	run, "C:\Users\Sim\AppData\Local\Discord\app-1.0.9013\Discord.exe"
+	run, "C:\Users\Sim\AppData\Local\Discord\app-1.0.9021\Discord.exe"
 return
 
 !t::
@@ -153,11 +153,4 @@ IfWinExist ahk_exe Spotify.exe
 	winactivate ahk_exe Spotify.exe
 else
 	run, "C:\Users\Sim\AppData\Roaming\Spotify\Spotify.exe"
-return
-
-!v::
-IfWinExist ahk_exe OKZTWO.exe
-	winactivate ahk_exe OKZTWO.exe
-else
-	run, "C:\Program Files\OKZTWO\OKZTWO.exe"
 return
